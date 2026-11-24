@@ -1,0 +1,814 @@
+const DRIVE_ROOT_ID = "1bnCf1RAuFTEUt51kd8eY16oTeOAUM8ns";
+
+/* Arborescence du Drive public "DRIVE DR RAWNEK SAOUDI" (snapshot 2026-11-24).
+   Format fichier : [id, nom, type, dateModifiee] */
+const TREE = {
+  id: DRIVE_ROOT_ID,
+  name: "Drive Dr Rawnek Saoudi",
+  files: [
+    ["14rihDHlf_3ELo_DrxbB7sI3MCa57iNSy", "programme des cours inclus Résidanat Constantine.pdf", "pdf", "2025-11-27"]
+  ],
+  folders: [
+    {
+      id: "175sP7Ftv6WtoK2ulQovUp5k8OL_naMcA", name: "BIOLOGIE",
+      files: [],
+      folders: [
+        {
+          id: "1WoLNNQvyAiqkBlJSXoPAdWWTj98CzM5Z", name: "ANAPATH",
+          files: [
+            ["1JQRw2fV_neEHd3nAG4IPqKqe9nHn4C6Z", "0. Conseils anapath.docx", "docx", "2025-11-27"],
+            ["1E8Cqv8-z2p7DAO3Up7xVDQH6QlcTkR5p", "1. Processus Inflammatoire.pdf", "pdf", "2025-11-27"],
+            ["1NZbumyNKgtrcIk_gj3WD5MjBuU-XkxMH", "2. Les troubles circulatoires tissulaires part 1.pdf", "pdf", "2025-11-27"],
+            ["11iLpM3g24X6xODJxgOQbB_OxmBxJlNuH", "3. Infarctus, infarcissement_.pdf", "pdf", "2025-11-27"],
+            ["1gw_8B6aknnvCV5GD-SqxzjMHyXFt16Ht", "4. THROMBOSE W EMBOLIE_.pdf", "pdf", "2025-11-27"],
+            ["1aJRg1nXxs44UNHepn66Rt3KJq_rO5zUK", "5. ATHEROSCLEROSE.pdf", "pdf", "2025-11-27"],
+            ["1ym-AvzcFNUTj9W5aO1z5CPYpk4bzmV9P", "5. Thrombose, Embolie_.pdf", "pdf", "2025-11-23"],
+            ["1PtzbsryR2V7WTl8s2v_9RwVxryVCU45M", "6. Généralités Sur Les Tumeurs.pdf", "pdf", "2025-11-27"],
+            ["1iq0RZYF1kqIn7KJYSPBzw5YliSOcmOlM", "7. Progression du Cancer.pdf", "pdf", "2025-11-27"],
+            ["15I4MC-mBDEUph9byqSQ2bjVtMuJD6gfp", "8. Tissu cancéreux_.pdf", "pdf", "2025-11-27"],
+            ["1hZJFG7MBrZzy2l_PGV2koYEFTKccpsl", "9. Tm épithéliales glandulaires_.pdf", "pdf", "2025-11-27"],
+            ["1yHzzoHF_MWB7J6kb3M5E6dvP7J24LDAG", "10.1 Tm épithéliales malpithiennes et paramalpighiennes_.pdf", "pdf", "2025-11-27"],
+            ["1HFLKXBHxo16Q8bgF3IiZs7mSmhp6uDT3", "10.2 Tm épithéliales malpighiennes et paramalpighiennes_.pdf", "pdf", "2025-11-27"],
+            ["11vzypUvXtB_WtTIlQ0AicxcEQdEO23kn", "11. Tumeurs Mésenchymateuses.pdf", "pdf", "2025-11-27"],
+            ["1X7E6w3iAKrDj-csCLVkpL_Vyk-bd9tRa", "12. Tumeurs Embryonnaires.pdf", "pdf", "2025-11-27"],
+            ["1HG-F3V-x0D4c8QHrE5x468YUNwDqk2", "13. Les tumeurs nerveuses et les tumeurs Mélanocytaires.pdf", "pdf", "2025-11-27"],
+            ["1F9LaB6_Fyzp1a92xDrYBEYPofxRh45yo", "14. Lymphomes.pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "1M0K-S2lqpeNfgxSx55AkFkrt0Bcvuwcr", name: "BIOCHIMIE",
+          files: [],
+          folders: [
+            {
+              id: "1AdXE8tDfs2Mlfl0yFODOOt6T_BPUYhUz", name: "BIOCHIMIE 1ERE",
+              files: [
+                ["1znhp5kyd8ENFIAEC7udAfjPfzSBrV-La", "0. Conseils Bioch première année.docx", "docx", "2025-11-27"],
+                ["1wH_YlR5CPvTRQEVlAAqfgokRhoO80oUA", "1. metabolisme_glucogene2019kouider.pdf", "pdf", "2025-11-27"],
+                ["1ehp9VnrHrV563WlKMhjMc7Mp0H_4WvLX", "2. glycolyse2019kouider.pdf", "pdf", "2025-11-27"],
+                ["1M_dIKaOkvk43NxnZi6YCDMF0oMObTruL", "3. neoglucogenese2019kouider.pdf", "pdf", "2025-11-27"],
+                ["1vZPZSKk7pB7qE50FMK_6UHu6lsffgn5g", "4. Régulation proteines2019benattalah.pdf", "pdf", "2025-11-27"]
+              ],
+              folders: []
+            },
+            {
+              id: "1W53vTV83EPYhI3pjCTUJUV_Los8uljqN", name: "BIOCHIMIE CARDIAQUE",
+              files: [
+                ["1R8W6kIOGF5B3iQIBJvvOW8w38wun5IZq", "0. Conseils Biochimie cardiaque.docx", "docx", "2025-11-26"],
+                ["1r5jujUt4zNJ4R8PoIwGGyT1yeff4caUS", "1. LES BIOMARQUEURS CARDIAQUES cour (1) (3).pdf", "pdf", "2025-11-26"],
+                ["1xerdxQf2IoncKLZ9uCV4jRa9R6U-nr5t", "2. Lipides Exploration.pdf", "pdf", "2025-11-26"]
+              ],
+              folders: []
+            },
+            {
+              id: "13562j0QUi31J-Mz0KIbgpIi3m8T06-Pk", name: "BIOCHIMIE DIGESTIVE",
+              files: [
+                ["1m2FYUo-LP7WwjMk8f1rRH-v2DRJD5eIp", "0. Conseils bioch dig.docx", "docx", "2025-11-26"],
+                ["1FVilghD_cAgeW3r-R57n_NV72-ssNSnP", "1. Exploration Digestif.pdf", "pdf", "2025-11-26"],
+                ["1JtT_s47f4t9iPdNqzICeKv1uQ6X3OGLj", "2. Foie Exploration.pdf", "pdf", "2025-11-26"],
+                ["1V48EzQuRVdGbtSDWEhgbAzIKd-X6xYqD", "3. metabolisme du fer.pdf", "pdf", "2025-11-26"],
+                ["1Jz2fRSJiMQZlTJBejZSSZw9-4vdd06oO", "4. Exploration des protéines plasmatiques.pdf", "pdf", "2025-11-26"],
+                ["1QtxtlLKxeaAjRg1iC0d4rr3kNh-PScdn", "5. Régulation Du Metabolisme Des Protéines.pdf", "pdf", "2025-12-04"]
+              ],
+              folders: []
+            },
+            {
+              id: "1l3-GO6vihdG1re9ywlMgmF_LhACO-3Dy", name: "BIOCHIMIE ENDOCRINO",
+              files: [
+                ["11_Mu27xfYfL1Cmrogh-16TMHv8O8cgsj", "0. Biochimie endocrine.docx", "docx", "2025-11-27"],
+                ["16JtZ02oc8K1Knsj20H6R4ubiLi4ZdAtc", "1. hypothalamo-hypophysaires.pdf", "pdf", "2025-11-27"],
+                ["1m57jy_Px-lntW-WMpUQPZpsCNedRNSbD", "2. THYROIDE.pdf", "pdf", "2025-11-27"],
+                ["1QaQ5P_V6ZfkSLFrFgfp0UCMXvB2CfoaS", "3. HORMONE STEROIDE.pdf", "pdf", "2025-11-27"],
+                ["1fEOZ02l7kQ1w7B5ofJgY_vhuLxkC39wu", "4.1 LES HORMONES SEXUELLES.pdf", "pdf", "2025-11-27"],
+                ["1T9BXPtqZ9bfNFzUWbcUaSyexXWirWNpm", "4.2 schémas hormones sexuelles_.pdf", "pdf", "2025-11-27"],
+                ["18WNMzW3w_8MSc_lcuov18lbY0nMfpw", "5. Les catécholamines.pdf", "pdf", "2025-11-27"],
+                ["1kIdxlqr-9u6E51nW1n1E9ZMeXIy_Fpf8e", "6. Aspects biochimiques du remodelage osseux.pdf", "pdf", "2025-11-27"],
+                ["1BO4MRQCE72ARMkA92lqRW7buai_nQQNC", "7. Glucides Exploration.pdf", "pdf", "2025-11-27"],
+                ["1d3Bws1ZR2bMBsMhfTL71mvHELy2d2qW", "8. Exploration du métabolisme phosphocalcique et du remodelage osseux.PDF", "pdf", "2025-11-27"],
+                ["1VCxtk7NorO74OYKqNO16E_0-RYtoMc6k", "9. Exploration Des Endocrinopathies.pdf", "pdf", "2025-11-27"]
+              ],
+              folders: []
+            },
+            {
+              id: "1EfI9x9Fj-Hfk0QhDh32VuTm8V9AoAonJ", name: "BIOCHIMIE RENALE",
+              files: [
+                ["1NbOQtruTMcn6ZUvMLUZcIC_OMTnKtgcD", "0. Conseils Biochimie Rénale.docx", "docx", "2025-11-27"],
+                ["1S1NRZM4mzfpBMRDURBMuCXXcqce2UyIl", "1. Fonction Rénale exploration.pdf", "pdf", "2025-11-27"],
+                ["1os0fPjfX2qPtf7gcOXEvls4KK20zdXa", "2. Exploration des Anomalies hydro-electrolytiques.pdf", "pdf", "2025-11-27"],
+                ["1s-7w2kLzkIA3nAKF_5-_RcGgeIGr9hGN", "3.1 Équilibre Acido-Basique (Cour).pdf", "pdf", "2025-11-27"],
+                ["1JzhtAfMyAe4tITQuddM3ZuV1dLqp3uQ", "3.2 équilibre acidobasique.pdf", "pdf", "2025-11-27"]
+              ],
+              folders: []
+            }
+          ]
+        },
+        {
+          id: "1XWjSkll0NGupGycRx0bK1dZJdUo8h6DM", name: "Cytologie",
+          files: [
+            ["1onjbJQJ58bppoTVEl6kbNYhNhGMGuZOX", "Noyau Et Cycle Cellulaire.pdf", "pdf", "2023-11-11"]
+          ],
+          folders: []
+        },
+        {
+          id: "1GBPlTWxSLkpm7LB4JbwkrPT25uPbVzvA", name: "Génétique",
+          files: [
+            ["1mZr1vAIBChU4cRQ1t6N92zI_cCHJFePm", "0. Génétiques et Cytologie conseils_.docx", "docx", "2025-11-26"],
+            ["1y_FPX5eCFuIrLvrWmCr6ilTV7edesvB-", "Acides Nucléiques.pdf", "pdf", "2023-11-11"],
+            ["181NHEp_80pRRVD_iEEVMr8F8qdboyqx2", "Chromatine.pdf", "pdf", "2023-11-11"],
+            ["1ARW9lqvzs9fEdAi0j-sKFvs4G_hUA-bO", "genetique.pdf", "pdf", "2024-11-15"],
+            ["1M33phhPzNmJK78zREen_ESckXtu066eK", "Génome.pdf", "pdf", "2023-11-12"],
+            ["10teaYD1fUh9RT5pD0aQyTrbslwz56jW", "Traduction.pdf", "pdf", "2023-11-11"],
+            ["1gA4VIB3pezZV5LuryDmxtejCDyre3g7A", "Transcription.pdf", "pdf", "2023-11-11"],
+            ["1gKXtIybIrkfHQQFcv8mIkbKQQ-Ik8xfB", "Z.pdf", "pdf", "2023-11-11"]
+          ],
+          folders: []
+        },
+        {
+          id: "1dS48bhaCrkzTKDu_VWx58wuWEj6MnqWO", name: "IMMUNO",
+          files: [
+            ["11TgTlT7Xq9Q-Wf9_apw55yI4uS0ZUVJr", "0. Immuno conseils_.docx", "docx", "2025-11-26"],
+            ["1W8V8iqk6CQsfFB1z8kmsVRHoS63ujUXu", "1. Organes Lymphoïdes.pdf", "pdf", "2025-11-23"],
+            ["1aIXDohoiNjxR2IDpfEY5tL-KZ7zsbOXp", "2. Réponses immunitaires.pdf", "pdf", "2025-11-23"],
+            ["1NKzPFPbZEKiSORmKtgU2krcKvWJIbGLQ", "2. Cellules de l'immunité.pdf", "pdf", "2025-11-23"],
+            ["16Lxo8kv0Tb-iHZn8UgcisjfHkJO6y47S", "2.1. les granulocytes et mastocyte.pdf", "pdf", "2025-11-23"],
+            ["1o5Qj8e9mw96lDcd4jRpZwMoqi2-JbRKI", "2.2. CPA.pdf", "pdf", "2025-11-23"],
+            ["1-av5xpqvjRjhRDN10rWuPKUHhA7cWoRw", "2.3. monocytes et macrophages.pdf", "pdf", "2025-11-23"],
+            ["11zCLXDFgWTcDUYAJXEmGe0qfM1R99ba7", "2.4 NK.pdf", "pdf", "2025-11-23"],
+            ["1T0D37lkJgdQvxozZveApa7FNJd7NPPYe", "2.5. LB.pdf", "pdf", "2025-11-23"],
+            ["1_vkTTrYIiV7iA6eZeIjU9Re_h7wNnU0p", "2.6. LT et TCR.pdf", "pdf", "2025-11-23"],
+            ["1G497TM-nB8gICNW-sw2eMnzu5IVP05R9m", "4. Antigènes.pdf", "pdf", "2025-11-23"],
+            ["1UZIAHd0qSx2sHoSJucLsWYry5-k9Nz8", "5. Immunoglobulines.pdf", "pdf", "2025-11-23"],
+            ["10MUUKCqrrmlGla6i_Lm72vHL7t6BcFcCm", "6. CMH (Cour).pdf", "pdf", "2025-11-23"],
+            ["1r3WEBIWhQPQ9njYv-Gk44YGIohCr136r", "7.1. Complément.pdf", "pdf", "2025-11-23"],
+            ["1_dbz0kh7wVOOEqry1JjChF1gbRH0Ze5z", "7.2. Le Complément.pdf", "pdf", "2025-11-23"],
+            ["1uwIwjEqJXF-Y33r48fkjfTz7Zd1kYK-D", "8. Hypersensibilité Type I.pdf", "pdf", "2025-11-23"],
+            ["1VLeLM4IDGSXTTOmLAcbX34wvXqftZn87", "9. Hypersensibilité Type II.pdf", "pdf", "2025-11-23"],
+            ["1J7o2Qnr_-m1po4cxMPLe2N17Fabnea6q", "10. Hypersensibilité Type III.pdf", "pdf", "2025-11-23"],
+            ["1F131nMCyi0mJ8K9bV7MunH9iA0CLTP9a", "11. Hypersensibilité Type IV (1).pdf", "pdf", "2025-11-23"],
+            ["14Ub-xACeAvsK6tmsZt1-jBesk0o64aCY", "12. Hypersensibilité Type IV.pdf", "pdf", "2025-11-23"],
+            ["1iG3y4KBLnR_PygL7-hSEifSZjUpnuvGF", "13. Auto-immunité.pdf", "pdf", "2025-11-23"]
+          ],
+          folders: []
+        },
+        {
+          id: "1F-Avte9DjCQc0_Ggko8gaSA0ZDDNZ5Ac", name: "PHYSIOLOGIE",
+          files: [],
+          folders: [
+            {
+              id: "1avBatgTFp7WgTQ0KmVm2C9nOzgXBcZm6", name: "PHYSIO 1ERE ANNEE",
+              files: [
+                ["1uPmcrVIKBOq1bCFDJQ7jQ8sf_3BBkGlN", "0. Conseils Physiologie première_.docx", "docx", "2025-11-27"],
+                ["1m4P-qB-yakjSLZGqfznwuPEmdspVlUqu", "Bioénergétique.pdf", "pdf", "2023-11-11"],
+                ["1ZToYmJCcERDV7CPrtVQrgmIPFiLGEhjS", "Compartiment Liquidien.pdf", "pdf", "2023-11-11"],
+                ["1d-Udt7m6Vo6ZRcxoZcwvILBaQKRzF8U", "interactions Ligand Recepteur.pdf", "pdf", "2023-11-11"],
+                ["1Pxm1JwnHD-QdxDy2NpkFWpWWgIHNL7I0", "membrane plasmique.pdf", "pdf", "2023-11-11"],
+                ["118xk5AXfGVQXLGunVFW3wOUeWWNwBAqp", "Muscle.pdf", "pdf", "2023-11-11"],
+                ["1neuJDbCLcPQyrLayvYyIdKx975JlyMi_", "Neurone.pdf", "pdf", "2023-11-11"],
+                ["1njKbYIHRXq2URfuHTzmyVtGoNtSYcF6j", "physio1an-systeme_nerveux_autonome2021bourahli.pdf", "pdf", "2025-11-21"],
+                ["1ce07nStz3F4iY_6imBIuaXXhZQRSLcR", "Système Nerveux Autonome.pdf", "pdf", "2023-11-12"],
+                ["1HPAXdLVIf3vDU-RrTHtmszGqr2G20gJm", "thermorégulation.pdf", "pdf", "2023-11-11"],
+                ["1DvHPhLZSzdF9H_0NI6nquk03A3KeGbB8", "Transmission Synaptique.pdf", "pdf", "2023-11-11"],
+                ["1aRiVYMgN2GgjL1GZvUzQofhAYPhmeSIJ", "xAdrenergic Receptors.pdf", "pdf", "2023-11-11"],
+                ["1Fcc8KYiWK9e-vAw-61LFMExxYyEzbuD0", "xCommon Cell Signaling Pathway.pdf", "pdf", "2023-11-11"],
+                ["1aoXFmDuhEd-Nfi_2D32u1NBABLfmtKxU", "Z.pdf", "pdf", "2023-11-11"]
+              ],
+              folders: []
+            },
+            {
+              id: "1kZmo6QSG7qH3pVNKfcWrreTRjvRmSMRD", name: "PHYSIO ENDOCRINO",
+              files: [
+                ["1HcPtUJy0U3PWy4WhO84QQcMswB7GOkKD", "0. Conseils Physiologie endo.docx", "docx", "2025-11-26"],
+                ["1rABjL03gi1Ro-d7jitK2iX0YcluThYuM", "1. PRINCIPES DES SYSTEMES DE CONTROLE HORMONAL.pdf", "pdf", "2025-11-26"],
+                ["1PcQo5mc9kulcyvXlWuagU0yYMgHypEmJ", "2. PHYSIOLOGE DE L'AXE HYPOTHALAMO HYPOPHYSAIRE.pdf", "pdf", "2025-11-26"],
+                ["1O37Dy2vIe4w6cw2uVIyYGGyKW378_EgG", "3. Complexe hormonal GH - Somatomédines.pdf", "pdf", "2025-11-26"],
+                ["1ZMZAMPV-g5a33ENBaZMUu9M8-YY4roL9", "4.1. physio Surrénales.pdf", "pdf", "2025-11-26"],
+                ["13-NQlAAm9G3vICv7lxJgrpR_uirJgQ2i", "4.2 physio surrenales.pptx.pdf", "pdf", "2025-11-26"],
+                ["1BR-V9J8bs4rzedoM51CMIc-Uo7yjhzf_", "5.1 Thyroide.pdf", "pdf", "2025-11-26"],
+                ["1VI7TSDx1g6njicuReQR_OAToCJRzAV07", "5.2 Notes physio de la thyroïde_.pdf", "pdf", "2025-11-26"],
+                ["1wBJBuhBLQUuQc3ScfNN1Tuw1yxFDa4uy", "6. Gonades.pdf", "pdf", "2025-11-26"],
+                ["1pMSHZn2NCOP8giTRM4oDoucFpJpCcCeM", "7. Pancréas Endocrine.pdf", "pdf", "2025-11-26"],
+                ["1PtnFHRa6NQ8WIVj-1aSepdu33fpqyFjD", "8. Parathyroïdes_.pdf", "pdf", "2025-11-26"]
+              ],
+              folders: []
+            },
+            {
+              id: "1CHOuHLlEECCfSfH82KreRmc0eCC2LnWm", name: "PHYSIO HEMATO",
+              files: [
+                ["1T5WDdhj3tEwdle1inIVhPmqgRSu4NS0k", "1. HemogrammeR2.pdf", "pdf", "2025-11-27"],
+                ["1bk-dKT_Q_7NqcWqpG8H4NuN0LmwHRwAL", "2. Hemostase.pdf", "pdf", "2025-11-27"],
+                ["1M7xw4LkBVBFeZcg_ID9JasSX8eAzw6aw", "3. Groupes sanguins.pdf", "pdf", "2025-11-27"],
+                ["1UbfTvJA618h_wRhdhzoSPvaWB48XJZOf", "4. Transfusion sanguine.pdf", "pdf", "2025-11-27"]
+              ],
+              folders: []
+            },
+            {
+              id: "1X5WVR3o_lodEu6gsO6W1yJQbFYcGCXjX", name: "PHYSIOLOGIE CARDIAQUE",
+              files: [
+                ["1vyiitdtr6Rcn16mYPFQzZ6Y5hjnhs_YY", "0. Physio cardiaque conseils_.docx", "docx", "2025-11-26"],
+                ["11kQSEsHt-_ykI0lr5cJeuBuAQVr_95i5", "1. ELECTROPHYSIOLOGIE CARDIAQUE.pdf", "pdf", "2025-11-23"],
+                ["1aK_Nj5o1mPxPP0OZVHvePj5PfJ949mg8", "1.2 Electro-physiologie Cardiaque.pdf", "pdf", "2025-11-26"],
+                ["1Wek7iIFCoeFPXVLTyNEy1lddRhOsQq3", "2. Cycle Cardique_.pdf", "pdf", "2025-11-23"],
+                ["1BH9kpAYxyh3ZPKgsLD2C-3I9Xvm8esd-", "3. Débit cardiaque.pdf", "pdf", "2025-11-23"],
+                ["1FoA66IuuwRNBAHJbK-lNBwdsRE699IBc", "4. Pression Artérielle.pdf", "pdf", "2025-11-23"],
+                ["1dkFo0GalWJ8F-QCdyRcBspZ7r7nu3tYv", "5. Circulation Coronaire.pdf", "pdf", "2025-11-23"]
+              ],
+              folders: []
+            },
+            {
+              id: "17y6krAdLCsOvH1DoragK5TsTcyW-hwVV", name: "PHYSIOLOGIE DIGESTIF",
+              files: [
+                ["147L_BMl_7KA9fWli_paZM4kYjMwMR0Y8", "0. Conseils Physiologie digestive.docx", "docx", "2025-11-26"],
+                ["1ZIhVT6ezh6-VajtQzFrtTB1Vt7quvPQr", "1. la-phase-buccale-.pdf", "pdf", "2025-11-26"],
+                ["1kM8MIqEIl3NRAkYgcJc45zGVkJ-Y-E19", "2. La-Déglutition- .pdf", "pdf", "2025-11-26"],
+                ["17N00C7Ciwt_EYPTcsrlRTZwFsJFk3Axx", "3. La-phase-gastrique- .pdf", "pdf", "2025-11-26"],
+                ["1S5w_Xnym0AYT4MunwLdz_6-oYmC5mmIt", "4..la-sécrétion-biliaire-.pdf", "pdf", "2025-11-26"],
+                ["1oCj_iGph9SHxEu_RDPI39gveGgGQSVk_", "5. La-phase-pancréatique-pdf.pdf", "pdf", "2025-11-26"],
+                ["14Sn5HWqyI2laXPsCf-MnGW_Elge9z79W", "6. la-phase-intestinale-pdf.pdf", "pdf", "2025-11-26"],
+                ["1SDncpN2vjxcEVcN7YA2JG2Z_8e_HLEOT", "7. la-phase-colique- (1).pdf", "pdf", "2025-11-26"]
+              ],
+              folders: []
+            },
+            {
+              id: "1FnTl32SOsy61xoSX7yLJX4-9x95VEZkr", name: "PHYSIOLOGIE RENALE",
+              files: [
+                ["1DklBerUHFuiI3llCQG62hrOoR5MFWVfA", "0. Conseils Physiologie rénale.docx", "docx", "2025-11-26"],
+                ["1uklOduN5UpMEPaWPrOI8EI416KJJdJjp", "01-Notion de base physiologie rénale.pdf", "pdf", "2023-11-12"],
+                ["19-fG_YXznCBvkxXULj3Ujezv4ShZlRn9", "02-La filtration glomerulaire.pdf", "pdf", "2023-11-12"],
+                ["1qWUA845vWmwSnXVGDlJt-Q_GKDxH8z_f", "03-fonctions tubulaires.pdf", "pdf", "2025-11-21"],
+                ["19yAMK8JYl6HfpqQRr1bCyLtBRCPzDHpe", "04-pouvoir concentration dilution des urines.pdf", "pdf", "2023-11-11"],
+                ["1dtwc7a2fBOpGN7qAji5p8BSAz6sq-A9K", "05-Rein Et Regulation Du Ph.pdf", "pdf", "2025-11-26"]
+              ],
+              folders: []
+            },
+            {
+              id: "1J35wMfxnAncX0PCXJS0WzbW_9A8D3BTc", name: "PHYSIOLOGIE RESPIRATOIRE",
+              files: [
+                ["1DXbuQ-oKzi7vfPain9JhH1sNi6cZF9Cv", "0. Conseils Physiologie respiratoire.docx", "docx", "2025-11-26"],
+                ["1mIon9MGRMH_HXQzvxiJ1pcNXDBuVL7xE", "1.1 Mécanique Ventilatoire.pdf", "pdf", "2025-11-26"],
+                ["1ACJv_-0XxvaDKGBsYkj_0WtjHkxYuY_S", "1.2 Mecanique_ventilatoire.pdf", "pdf", "2025-11-26"],
+                ["1cvG2bnKEABiuQeqgrvuvkaIanLUJnkMU", "2- Cycle Cardique 20 21 [Mode de compatibilité].pdf", "pdf", "2025-11-20"],
+                ["1LZNSkfle817pjXwStz4JeuOvCQG6hlCQ", "2. EFR.ppt", "ppt", "2025-11-26"],
+                ["184VMU_PLVXJ2P-qLzo68Nb_i-ZYav8xF", "3. Échanges Gazeux (Diapo).pdf", "pdf", "2025-11-26"],
+                ["1mQlgiIGtS0L3nYxdoN0EGDFJKpIhHvwhf", "4. rapport ventilation perfusion.pdf", "pdf", "2025-11-26"],
+                ["1qdmip3FegpMTHY3FDdSODUTmZ4Rj834f", "5. Fonction Respiratoire du Sang.pdf", "pdf", "2025-11-26"],
+                ["1GVDaMID1xYDVughXQIRVQHxTcVRM4tSH", "6.1 Control de-la-resp-Bougrida.pdf", "pdf", "2025-11-26"],
+                ["1Y6MOp-KEOjUgX7RtPyEAGQvDLyiEHHXk", "6.2 Contrôle de la respiration.pdf", "pdf", "2025-11-26"]
+              ],
+              folders: []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "15EjcGm7t8kyDsJPd8_FoCGtnLKgh4s7b", name: "CHIRURGIE",
+      files: [],
+      folders: [
+        {
+          id: "1yZdEh4wrmAwTt4hvz-tjK3P7Uu0fM8BO", name: "GYNECOLOGIE",
+          files: [
+            ["1EqO_kObvUEYDwMheRMaeiWbaxk81n_8x", "0. Conseils Gynécologie.docx", "docx", "2025-11-26"],
+            ["1I3GDLbPEfGyZsq_4zU9TsDUrDXdtxO4Y", "1.1 Délivrance normale et pathologique (1).pdf", "pdf", "2025-11-26"],
+            ["1XNxZAgcLaKDI5skxd7wef5EHdlxCZYnM", "1.2 Délivrance Normal et Pathologique (Diapo).pdf", "pdf", "2025-11-26"],
+            ["1WgNl2KFyU7DC_KMitNhm3CZQxYwXqM2i", "2. Placenta prævia.pdf", "pdf", "2025-11-26"],
+            ["1RdFkzVn6ag8SF7LBggazWapE7dDUq5", "3. HRP.pdf", "pdf", "2025-11-26"],
+            ["1MDx1I2g8isq3uMCFdFjNOjXx1UCDiIo60XTTO", "4. RU.pdf", "pdf", "2025-11-26"],
+            ["10Uc2vMksHeyUWeWh53Wadd94pBBsx9d", "5. avortement spontané enregistrement écrit .pdf", "pdf", "2025-11-26"],
+            ["1T8lS8YZQRLbTVNfNRLX6mkVMqljyzzRF", "6. MAP.pdf", "pdf", "2025-11-26"],
+            ["1Uzp1ePRXzFzgjrH6tkVQm9HqEjMADsUE", "7. Hmg génitale_.pdf", "pdf", "2025-11-26"],
+            ["1uyc8JMXnqxYqA06LebRd4jwwMgIy0xJa", "8. GEU", "pdf", "2025-11-26"],
+            ["1cUrypd-5Lble5zKvt0MpG8Ms8tNMUobT", "9.1. IGH.pdf", "pdf", "2025-11-26"],
+            ["1dCMTslbDU8OEW59Bx5zuds_TsLYXZm9o", "9.2 Kb Infection génitale de la femme (Infection génitale haute) - iKB Gynéco 19.pdf", "pdf", "2025-11-26"],
+            ["1JsIa9zEcXy9y8Aswl4fdr3pwQdVNWCTZ", "10. Leucorrhées.pdf", "pdf", "2025-11-26"],
+            ["1G0nLR4qXOzukZThLzJ6wwa_J70XFBg-H", "11. infections et Grossesse.pdf", "pdf", "2025-11-26"],
+            ["1ef9MKH9w7gQKJF9qOgqzk0l1UBNoHlCh", "12- Myome.docx.pdf", "pdf", "2025-11-20"],
+            ["1Pc-cwz7-m1nHek48JeH6LJCW837LdVRL", "12. Tbc Genitale.pdf", "pdf", "2025-11-26"],
+            ["1_MaHfwfCZuMMy1ROEKY5oodR5Nqt3X8y", "13. myomes_uterins2020bicha.pdf", "pdf", "2025-11-26"],
+            ["1mz4PAlEowZLfj_aSQzjAPdxI7o0oikQC", "14. Tumeurs du Sein (Poly).pdf", "pdf", "2025-11-26"],
+            ["1kZ2O44wrmSbebpcG7X3s5RtMQb1vpQyc", "15. KC du Col (Diapo) (1).pdf", "pdf", "2025-11-26"],
+            ["1y9BTmQZtFSfD1CvBxWGUB_u93dB052t", "16. Depistage_kc_col2019loucif.pdf", "pdf", "2025-11-26"],
+            ["1lB2luCp9yvlw_UKQicUS8GM025s-tRJ", "17.1 POLY kc de l'endomètre.pdf", "pdf", "2025-11-26"],
+            ["1s2r-2r7DshYfvBiv7C3S3HeNQ7_PNNkJ", "17.2 KC de l'Endomètre (Diapo).pdf", "pdf", "2025-11-26"],
+            ["1V4lzGdGuIWtQ3gtsXn6y6yWtPMwddUUTI", "18. Tumeur de l'ovaire - iKB Gynéco 19.pdf", "pdf", "2025-11-26"],
+            ["1dlsBW_IXkXwNC2YRpANPAYLaYGT3TiEdAmiy", "19. Cancer de l'ovaire - iKB Gynéco 19.pdf", "pdf", "2025-11-26"]
+          ],
+          folders: []
+        },
+        {
+          id: "1knsXkrPOf6fA3nTMc8zZ8MnCkQJQL_Ey", name: "ORTHOPEDIE",
+          files: [
+            ["1Dajd3qVwUa8rFacYdvL2zfqubzBsByYV", "0. Conseils Orthopédie.docx", "docx", "2025-11-26"],
+            ["1Nls3QoWLbLqQAYkWBSHYed8jzsgOMsAK", "1.1 épaule.pdf", "pdf", "2025-11-26"],
+            ["1OrSVUIHxZe-bp5hoCvwy_wp7zKqkp3PV", "1.2 Traumatismes de l'Épaule (Diapo).pdf", "pdf", "2025-11-26"],
+            ["1Pv1hzWUoc0yIQ2WpkFB4cXJge0kLRRK", "1.3 Classification Rockwood.pdf", "pdf", "2025-11-26"],
+            ["1AP38NnybFfV2AteIBBd9WFEsx74d90kk", "2.1 humerus.pdf", "pdf", "2025-11-26"],
+            ["1B7U0RwXh36BeyU-N5g8Wcdp7tul-rd9C", "2.2 classification Neer.pdf", "pdf", "2025-11-26"],
+            ["1asygLQAR39wuzCIfllXzkvHCZ3MCm9jH", "3.1. Rachis.pdf", "pdf", "2025-11-26"],
+            ["1OtQdMFHlx3dCdQzPUumgvxPlMA9NrFR", "3.2 Traumatisme du rachis - iKB Traumato 22.pdf", "pdf", "2025-12-29"],
+            ["1Lp1OOYO1xNM2WW65VMl9nfT9brn7G-5g", "4.1. mal de pott.pdf", "pdf", "2025-11-26"],
+            ["1NKQugnrhxgVnn4b0Xs4PX7npWjzPS7pw", "4.2 mal_de_pott_.pr_n.boujouref (3).pdf", "pdf", "2025-11-26"],
+            ["1TndCPIEKPQPO0dptJM5ueuMUJ-sRizN2", "5. infections ostéoarticulaire pdf.pdf", "pdf", "2025-11-26"],
+            ["1ZuQr54H86n--WwO_OTuUOnAhue6lPFxa", "6. Fracture extr sup fémur femur.pdf", "pdf", "2025-11-26"],
+            ["1rYxD0rVCIN9kd6aXC_2Rz8ZtT1q00f81", "7. LCH.pdf", "pdf", "2025-11-26"],
+            ["1Jsm4_4Wj6GQyZASWVo6AW4dq8T6HVPrX", "8. Luxation traumatique hanche.pdf", "pdf", "2025-11-26"],
+            ["1_P3mMUorV3FnGOpNttjsCmTaKrgl5Lgp", "9. Lesions_ligamentaires_genou2019neffaf.pdf", "pdf", "2025-11-26"],
+            ["1Tk3v2kSleorXWg_G_U0PNXbP9RLoryx9C", "10. genou osseux.pdf", "pdf", "2025-11-26"],
+            ["1diIf93edeirpUkwHvGZwh8ebvLzWoF01", "11. appareil extenseur genou.pdf", "pdf", "2025-12-29"],
+            ["1C421i8ZZY5mBU-doTDIb2lZuY-aYp6bg", "12. jambe.pdf", "pdf", "2025-11-26"],
+            ["1AztEoWAXf_kYEQTgs456OFmyHd4ETAmM", "13.1 Généralités sur les Tumeurs Osseuses (Poly).pdf", "pdf", "2025-11-26"],
+            ["13aPCuIoZ_qx-BznDsCwcD5W7DPV6LyDe", "13.2. Tumeurs osseuses.pdf", "pdf", "2025-11-26"]
+          ],
+          folders: []
+        },
+        {
+          id: "1UuEpAsfLDrJdfSbSvxuojA36tsqapALk", name: "URGENCES",
+          files: [
+            ["1azh0rHMKgQdy6lYhGfifVUljz3CB_-wF", "0. Urgence conseils_.docx", "docx", "2025-11-26"],
+            ["1t8Ow-DNlUoY2SR2k7OajycNHMyc9XpLU", "1. Trauma Crânien.pdf", "pdf", "2025-11-26"],
+            ["18gZZhk9_AYWMTIkRHYVPGWTlROOWjkgP", "2.1 Brulures-étendues-Pr-KARA-MOSTEFA-Rafik-FIN (1).pdf", "pdf", "2025-11-27"],
+            ["13Fa-5QTfHfrVLDInFVqgHZ72QYX9Cic9", "2.2 brulures cut rec (1).pdf", "pdf", "2025-11-27"],
+            ["15a5WkNGjuYJp9kO8hxvIHCF7DCZN13XR", "3. Polytrauma.pdf", "pdf", "2025-11-26"],
+            ["1SUMsCSCCVmgv3u3PmyOPYjFMCO2E2bIc", "4.1 Antibioprophylaxie_.pdf", "pdf", "2025-11-26"],
+            ["1dEyfp442x4Du0zmQ4P4SOAPs-VBsL5vn", "4.2 infections en chirurgie.pdf", "pdf", "2025-11-26"]
+          ],
+          folders: []
+        },
+        {
+          id: "1sZF-EJevXGwSdjG3efr_gPkCfqfhMsfH", name: "UROLOGIE",
+          files: [
+            ["11jiRq01dv6PLVag6npvhSdyO6BZio9h", "0. Urologie conseils_.docx", "docx", "2025-11-26"],
+            ["1Ykd-NoU47Okx9b6jwea4OtZTMS5gMl7", "1. Lithiases urinaires.pdf", "pdf", "2025-11-26"],
+            ["126c4PZd3Mw5ZBKYIkq33Kgh1y2KBtUZr", "2. CAT devant une Colique Néphrétique.pdf", "pdf", "2025-11-26"],
+            ["17G7vEmYQSNhcVlcWTvHuTyKwn0PwK1j", "3.1. HBP.pdf", "pdf", "2025-11-26"],
+            ["1-1fi6vU510qP4PSaqawhHJiFCPUZ2mpa", "3.2 Notes HBP_.pdf", "pdf", "2025-11-26"],
+            ["1UHYhTW6pUtAIWNifBbAf6U0ejcMAsuyF", "4.1. Rétention aigue urinaire.pdf", "pdf", "2025-11-26"],
+            ["1AbtjP9w667Ssvp79upy3w6l5f_auQ1n", "4.2 Rétention aiguë d'urine.pdf", "pdf", "2025-11-26"],
+            ["1171Jh83XLfE--Tu3_eaQCsQLTiyallp", "5. hematurie2022benmessaoud.pdf", "pdf", "2025-11-26"],
+            ["1X0lhzLZM8mHXgJAo3Mc327A18bWXlmgu", "6. Kc Vessie.pdf", "pdf", "2025-11-26"]
+          ],
+          folders: []
+        },
+        {
+          id: "1P1y4GisfcH3EtpAlE4XjxNyVnHjF9xH4", name: "VISCERALE",
+          files: [
+            ["1Z8rTswFxuV6HXLQl8dJ8SLsOw3S_Donb", "0. Viscérale conseils_.docx", "docx", "2025-11-26"],
+            ["15Qxfxgib5JbZ_3ITgFhXm2Jz3WG1lF3Q", "1.1 Appendicite.pdf", "pdf", "2025-11-26"],
+            ["1Qfh9aplkOymloRrNdgUK69eps8PKHKKz", "1.2 Notes Appendicites Aiguës.pdf", "pdf", "2025-11-26"],
+            ["18Ia4qw-q4AnXUJUfPb69K1mmF509uz8", "2. Occlusion Intestinale Aiguë (Poly).pdf", "pdf", "2025-11-26"],
+            ["1mn0E9y4u7Rbd95Fg739_GFzk88s7IUIp", "3. PANCREATITE AIGUE.pdf", "pdf", "2025-11-26"],
+            ["1uaFx7EzOWUUnMMMdbuRKJmw35PDV8VJf", "3.1 Pancréatite Aiguë_.jpg", "jpg", "2026-01-26"],
+            ["1H43OqcwfaTFUjL2GOWnCOErtywJDAJdo", "4. PERITONITES AIGUES.pdf", "pdf", "2025-11-26"],
+            ["1B_hKg6Gj3VoYfaYFOyV6XmQBeLobDXgPw", "5. Hernies.pdf", "pdf", "2025-11-26"],
+            ["1qZBp9juDwPuiSOFqTWJSvS_IV06lyLPo", "6.1 Hémorragie digestive - iKB HGE 18.pdf", "pdf", "2025-11-26"],
+            ["1FV9BO0u7lJ1P04uEjXZJUsqCAHyAFcz", "6.2 Hémorragies Digestives.pdf", "pdf", "2025-11-26"],
+            ["1tQ2WXHqvnnSInigd_zwbZtaW3ja16ypj", "7.1. Trauma abdominal Boucenna.pdf", "pdf", "2025-11-26"],
+            ["1Mti4QuRv2JnMpSeaLeVqa7-tOx2NNHhb", "7.2 Contusions et Plaies Pénétrantes de l'Abdomen_.pdf", "pdf", "2025-11-26"],
+            ["1c-6_fhAeRpJYtvE5WJ025jMCEycWEI3", "8. Lithiase Biliaire Et Complications.pdf", "pdf", "2025-11-26"],
+            ["1nWRsclwJhnUcpJzcjxye7C5rjPovmfm0", "9. lvbp2021benhamada.pdf", "pdf", "2025-11-26"],
+            ["1wGCuXJLA_r6Jgy5uJqvNtSHdrJeVQtjc", "10.1. angiocholite aigue poly .pdf", "pdf", "2025-11-26"],
+            ["1rZCpt_rWjMkWc0-4F6bxNvxESdz694hN", "10.2 Notes angiocholite Critères diagnostiques_.pdf", "pdf", "2025-11-26"],
+            ["1WWmG76xgGfmDvfddSpIt4zw_l8IP1lF", "11. ICTERES CHIRURGICAUX.pdf", "pdf", "2025-11-26"],
+            ["1O0Aw7s3zlhsQns7lAsotmAbil_mfZW0E", "12. abces du foie.pdf", "pdf", "2025-11-26"],
+            ["12ltnO0mqCcmXDKosSTMgcZo_NfE6ZYkB", "13. Kyste hydatique du foi ext.pdf", "pdf", "2025-11-26"],
+            ["1NzwobnMiU8gBgm53YChcayGfYWjmjUVU", "14.1 Kc Œsophage.pdf", "pdf", "2025-11-28"],
+            ["1bm0yLKy4HXXV4BvETJUQleoTtv-GA6gt", "14.2 -Cancer de l'Oesophage.pdf", "pdf", "2025-11-28"],
+            ["1SX8HA03AoXx3b1ZZQ5F6R6aKJ2CWoqo8", "15.1 cancer d_estomac (Rotation 1 ) .pdf", "pdf", "2025-11-26"],
+            ["1XXafZswr0wCIXkD6Q6-NGAhzMwniJGWjW", "15.2 Notes Kc Estomac_.pdf", "pdf", "2025-11-26"],
+            ["1FW72yllb_1jN3mvcirXyazlE9mneGnUE", "16.1 KC foie_OCR.pdf", "pdf", "2025-11-30"],
+            ["18t8bMVf7hksStVw3P9-f-AUBhjHC4vo-", "16.3 Notes Dr Boucenna Kc Foie pdf.pdf", "pdf", "2025-11-30"],
+            ["1o3GuwIfbMV-a44T3Xxbz1RznaVzok9w7", "16.3 tm bénignes foie_.pdf", "pdf", "2025-11-30"],
+            ["1_c34q66-T-dkfAiZAWblrArow6ayG0I", "17. Kc colon.pdf", "pdf", "2025-11-26"],
+            ["12sNFkakjtUegUvfAb2oxQ1-_FtY8MhpL", "18. Kc rectum.pdf", "pdf", "2025-11-26"],
+            ["1V13pMGtKlMDiVQ_8KtMZxg7hwhsgRH-O", "19. cancer_pancreas_exocrine2021choubar.pdf", "pdf", "2025-11-26"],
+            ["19sFgG3OHy5cmS_gi68JMnWJFzK0BPPBZ", "20. Kc voies biliaires.pdf", "pdf", "2025-11-26"],
+            ["1KxH3GaEbGUar2k19QxX1UCDiIo60XTTO", "21. Infarctus Entéromésentérique.pdf", "pdf", "2025-11-26"],
+            ["1JeTbY5uvgQPGokgjUjCLapY9uXv3a4FD", "22. polypes et polyposes rectocoliques.pdf", "pdf", "2025-11-26"]
+          ],
+          folders: []
+        }
+      ]
+    },
+    {
+      id: "1_9Ro5ZYcO4Xe_E0VUSYCSVAUU-K7Cuil", name: "CLINIQUE",
+      files: [],
+      folders: [
+        {
+          id: "1QR4jtEr8vRPwQ_AAtU2oEKGMjxWBw7MY", name: "CARDIO",
+          files: [
+            ["1q-TRo4a5feYPSbnknekzruYsC2v_aIPj", "0. Cardiologie.docx", "docx", "2025-11-27"],
+            ["17c9lS1X1dincO3m0Z1CXY6uWyzyVN_ag", "1. Sd Péricardiques.pdf", "pdf", "2025-11-26"],
+            ["1LfS_fE868YWgsRIJ0EMEe0l7M3quhPaQ", "2. EI.pdf", "pdf", "2025-11-26"],
+            ["1Uql04n6PEz975gzPxtRMhpXnFU-HyiA4", "3. Définition universelle de IDM.pdf", "pdf", "2025-11-26"],
+            ["1bNFIO3Yj_TnxGyof7VI0PwqsvZgZ_M", "4. SCA Nstemi.pdf", "pdf", "2025-11-26"],
+            ["1mR8BRBO8l6zEZrm-p1rzSZK29p-TkVd1", "5. SCA STEMI.pdf", "pdf", "2025-11-26"],
+            ["1F6gDbi-nfkxt7TAioU0gcpMcd8HUZSwD", "5.2 SCA.pptx.pdf", "pdf", "2025-11-26"],
+            ["1Jzrf1ifosoW4vL1q6dL_FQZzJ1XuT8Yf", "6.1 Insuffisance cardiaque.pdf", "pdf", "2025-11-26"],
+            ["1nULp7Q_2k1sNXPiOi9hr9-_dNfyLMnGz", "6.2 IC.pdf", "pdf", "2025-11-26"],
+            ["1KCXpRqKIhkIWalp0pJj5XGkUj37_YHyg", "7. Troubles De Rythme.pdf", "pdf", "2025-11-26"],
+            ["1eOpOMFow6JHGYRsmYsQ-yhv4ojFWW2Ra", "8.1. BAV.pdf", "pdf", "2025-11-26"],
+            ["1MPYn5HEz2KY69UJpR4Xz4fZFVvi7zAD7", "8.2. Troubles de la Conduction (Diapo).pdf", "pdf", "2025-11-26"],
+            ["1g14rd_1a-21bVbD3tkraZ0S2PXnh4Z1", "9.1 HTA.pdf", "pdf", "2025-11-26"],
+            ["1MBa32fIMVj_2dUJqpPtkXretGf-tjxwf", "9.2 HTA.pdf", "pdf", "2025-11-26"],
+            ["1HKixYKhKSLMbWNctG9Q1qt_UH2eupCQP", "10.1. retrecissement_mitral2022foudad.pptx", "pptx", "2025-11-26"],
+            ["1CiF0WRlXwkv7HL4K6UxpaBDjO9jzp5KA", "10.2 Insuffisance_mitrale2022foudad.pdf", "pdf", "2025-11-26"],
+            ["1GDDnlj-6TxMWCST2sB44CBkLyKC7vFIu", "10.3 Retrecissement aortique.pdf", "pdf", "2025-11-26"],
+            ["10_BvZHaOBE5T-M2A7Q7s-NXKk-TXkm7g", "10.4 Insuffisance aortique.pdf", "pdf", "2025-11-26"]
+          ],
+          folders: []
+        },
+        {
+          id: "1kMgbaL9NOFwp4Xq0xh_r0dHy4H513Hqy", name: "DERMATO",
+          files: [
+            ["15u8F6YCJOlOKM1rIJ8cvYCd4vlrr4WWE", "0. Dermatologie.docx", "docx", "2025-11-27"],
+            ["1l2dpXk93HNNsc_uVuiAPyhjQgpA4loqx", "1. Infections sexuellement transmissibles poly .pdf", "pdf", "2025-11-27"],
+            ["1RzHgJG9kK0fYfwlBjhspb8QoC4OkSJa", "2. Psoriasis .pdf", "pdf", "2025-11-27"],
+            ["18s9BoBlKJXtA7W6b89illQeE_DrjVPbj", "3. Eczémas _.pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "1REAwYXdrUb9H76Lmf_ai0LuxvOh7OyEa", name: "Droit",
+          files: [
+            ["10nCvYTqm3F1Bn4twnkHi6b58fVOy6yDn", "certificats medicaux.pdf", "pdf", "2023-11-11"],
+            ["1w0aWG3TJUGu1B5vt-j5nXg2hSW_rmua0", "Requisition.pdf", "pdf", "2023-11-11"],
+            ["149uFoBiUjqY8dxe3aHyHtDbA8UoOCFsh", "Responsabilité civile Du Medecin.pdf", "pdf", "2023-11-11"],
+            ["1YCRQ2xcTq9pHzAm4tawwDSsMauLnOddU", "Responsabilité Pénale.pdf", "pdf", "2023-11-11"],
+            ["14AHHunA0TIhfz9s2JDysJU3_PARhv5Uz", "secret medical.pdf", "pdf", "2023-11-11"],
+            ["1sKyLkLC1q9Aefe_Ekt06N7gAQnHzw-eG", "Z.pdf", "pdf", "2023-11-11"]
+          ],
+          folders: []
+        },
+        {
+          id: "1jjjElUtbR-iJkTstwg_HMvQI3Ffurt2I", name: "ENDOCRINO",
+          files: [
+            ["1ZPnA797jrcz3uI435kLZq7zLL-f_PLm5", "0. Endocrinologie.docx", "docx", "2025-11-27"],
+            ["1ZBloXhmi1VL_1HCSIlPlMST3M6Kx4CHR", "1. Hyperthyroïdie (Poly).pdf", "pdf", "2025-11-27"],
+            ["1cMCDTYASqqmQCueWHqd6EHtUcfibxPNd", "2. Hypothyroïdie (Poly).pdf", "pdf", "2025-11-27"],
+            ["1xpdsoDcKHxEaC5yHM3Ql9EZ0Dmy2QFO1", "3. Goître Simple TDCI (Poly).pdf", "pdf", "2025-11-27"],
+            ["14-JIBTP80oUgX0cyAp7L7LFsIpEgXv8C", "4. Nodule thyroidien.pdf", "pdf", "2025-11-27"],
+            ["1jPDFDJjUmdf2uLcGktGIK5jDZ0GwfTKK", "5.1 Cancers de la Thyroïde (Poly).pdf", "pdf", "2025-11-27"],
+            ["1qXiJLZmkmlFtgPMpPXTUFCA58Ain9kMU", "5.2 diapo kc Thyroïde .pdf", "pdf", "2025-11-27"],
+            ["1eE2MVFTgub0K-J7OLxdseohne0Aud3kc", "7. Cushing.pdf", "pdf", "2025-11-27"],
+            ["198q1tqKc-GIAKteZMKXhT3ckfRiTz2ac", "8. Hyperparathyroidie.pdf", "pdf", "2025-11-27"],
+            ["1W14L0HiNBY8JbUrtrfJW8lZBSeDC5Ae1", "9. Hypoparathyroidie.pdf", "pdf", "2025-11-27"],
+            ["1cRRy4xcJwHptkSkzgOj0le8ASqSM5c8G", "10. Insuffisance Surrénalienne.pdf", "pdf", "2025-11-27"],
+            ["1NuC-bP9Tw_qCQfhwzwOckxqMjpaXTMzq", "11.1. Adénome Hypophysaire (Diapo).pdf", "pdf", "2025-11-27"],
+            ["14hFyFPY49rbsvsnOp3s4zD5NJYoidJQ0", "11.2 ACROMEGALIE.pdf", "pdf", "2025-11-27"],
+            ["16FyQYQJwuKEWxeEIjhJgozssBiDcPWbd", "12. diabète insipide.pdf", "pdf", "2025-11-27"],
+            ["1jUFMfF0an21yOVAFKPu-_FnjSEEphEuM", "13. Retard De Croissance.pdf", "pdf", "2025-11-27"],
+            ["1CFF1YuyYaGQl0Riy2LQRdLzpmyQHqtwc", "14. Définition Diabète.pdf", "pdf", "2025-11-27"],
+            ["17oglz9bGGmZwc59SOw5tzyGi_1T0S1N5", "15. Complications Aigues Du Diabète.pdf", "pdf", "2025-11-27"],
+            ["16Cp_2dAKQqnLnG2jHtLt4QPOFD867GtW", "16. Complications Dégénératives du DS_(Poly).pdf", "pdf", "2025-11-27"],
+            ["1dEGQ-JRYFz-zT-CnBgGe3A6SS0Z8GBSP", "17. Pied Diabétique.pdf", "pdf", "2025-11-27"],
+            ["1cw-QqBK8QrYoHxqePSCsxEqLbYwjwQtW", "18. insulinothérapie.pdf", "pdf", "2025-11-27"],
+            ["1SQYKRaMFlepjMzX1EvpVqTT2yq6wm1NP", "19. Traitement DT2.pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "18iQUWTVFAvgpllhDU70_ARlC4rKx9HuV", name: "Epidemio",
+          files: [
+            ["1HWX87Hr4QmdkZ2qgN4U1AjFI6iU_2tHE", "0. Épidémio.docx", "docx", "2025-11-27"],
+            ["17U9Y9Fl_gNZSnpBXLLewWxjkF1s_epgH", "Indicateurs De Santé.pdf", "pdf", "2023-11-12"],
+            ["1QHPlCkgzM-dvaGapmCBPWvtvmgJt84J5", "investigation d_une épidémie.pdf", "pdf", "2023-11-11"],
+            ["1szXu0Av_KWV4d9itKu4EA9dlsFl4qN0C", "M. Transmissible.pdf", "pdf", "2023-11-12"],
+            ["1DAKMuwSLupr695R3nDIRQrJ1l5AYY4Gj", "Maladies Transmissibles.pdf", "pdf", "2023-11-11"],
+            ["1pu7mq1PyVs-3VPmOXHXY7142LJSXTvrF", "Programme Elargi De Vaccination.pdf", "pdf", "2023-11-12"]
+          ],
+          folders: []
+        },
+        {
+          id: "1ksmVGlLnV6EHChNg_c_vO7q3h57ggX0i", name: "GASTRO",
+          files: [
+            ["1phh9z0DPhKTkWBL2ITqpEt-ykNhzuiEn", "0. Gastrologie.docx", "docx", "2025-11-27"],
+            ["1tP6qKE6rMs9kpwKdZoNJDuhlxjoif_m4", "1.1 ulcère gastro-duodénal.pdf", "pdf", "2025-11-27"],
+            ["1_N3CSTsQAvAQt9JHRJtMJOA-w0ffkADv", "1.2 Notes MUGD.pdf", "pdf", "2025-11-27"],
+            ["1XEJRpPyYSVxPOOmA6k433WyPccuRmTBv", "2.1 complications_ugd2022niboucha.pdf", "pdf", "2025-11-27"],
+            ["1Qzo_DyCIcO_x7CqbR44JrZmT9Lpk0OrJ", "2.2 Complications MUGD.pdf", "pdf", "2025-11-27"],
+            ["1eJO_FKG4NfZGNPGCOqXsPz4fUN9AkKGd", "3. Les Hépatites Chroniques.pdf", "pdf", "2025-11-27"],
+            ["1B1gdvdgSesiom9912UWdsaM4hqy2fnAx", "4. cirrhose.pdf", "pdf", "2025-11-27"],
+            ["1ENalDheqg8XyH5w-N7eskH6_eoyjAwaG", "5. Ictère.pdf", "pdf", "2025-11-27"],
+            ["1j0cgAiRmvtsyurZ7SeJTe2GNYGnmlHss", "6. Ascite.pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "1tq2BhsnyVlgDKa80UfvzO-CxzRRCpR4W", name: "HEMATO",
+          files: [
+            ["1WYdE7Wyq84wGgU6bqQT4s9hqf9o7V9J7", "0. Hématologie.docx", "docx", "2025-11-27"],
+            ["1GpN-DRnZr4tD8CW0eQ2fjYR0trrDu1ab", "1. Anémies carentielles.pdf", "pdf", "2025-11-27"],
+            ["1D3W3caq7YdSnAlDg4XUDTxjac8wHFtsR", "2. ANEMIE HEMOLYTIQUE CONGENITALE.pdf", "pdf", "2025-11-27"],
+            ["1_RV8UZokLrVi0NfWBrIRBAqaR5BeuCLK", "3. ANEMIE HEMOLYTIQUE ACQUISE.pdf", "pdf", "2025-11-27"],
+            ["1FychtR9mr9-FvkOXDXgWmRv-jpd43dIu", "4. HEMOLYSE.pdf", "pdf", "2025-11-27"],
+            ["1DnKvApjwhF-6rhs8TvYH7edJcMaqk7m8", "5.1 Purpuras.pdf", "pdf", "2025-11-27"],
+            ["1BxZ3O8Gl1bdy7Wb73bcFF1qDrMY7E-q4", "5.2 Purpura thrombopénique immunologique.docx", "docx", "2025-11-27"],
+            ["1UtnkvE3hCzb2G6K59nmsyMfj2TwlDP3B", "6. syndromes myeloproliferatifs.pdf", "pdf", "2025-11-27"],
+            ["1Xz__4UcIaPM9OCvwjhjsypCz05GUmMTN", "7.1 leucemies aigues.pdf", "pdf", "2025-11-27"],
+            ["1TjQYlqk-Hxh7I7P7654IplEF282HxGY7R", "7.2 Leucémies aigues.ppt.pdf", "pdf", "2025-11-27"],
+            ["1G8gwBpD53p-OsoUzDFFWT5ga98h9YjFt", "8. Sd lymphoproliferatifs chroniques.pdf", "pdf", "2025-11-27"],
+            ["1F8QTcKhxK9DDMF_f9g0EXR-97y3xl6xo", "9. lymphomes .pdf", "pdf", "2025-11-27"],
+            ["1yNOg4KRCPsn5gvll2y7lgiYxDDi_DGj8", "10.1 dysglobulinemies.pdf", "pdf", "2025-11-27"],
+            ["18bgmfu5A4zKOkOvECdN5MXvgqdhPjAyG", "10.2 Les dysgloblinemies .pdf", "pdf", "2025-11-27"],
+            ["1cSatOBTy3PcmvgHO3Fqlup5oDQ6FQo8U", "11. Apalsie médullaire.pdf", "pdf", "2025-11-27"],
+            ["1cdYxGZNc0eJavkGZal46MYKzTwPzeyKE", "12. Splénomégalie.pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "1hDRXFplA0Puz1bPeSqbjlNvrxUtC9Eg4", name: "INFECTIEUX",
+          files: [
+            ["12F68wUz4MBsqcniks-1j1IDKrSfydBIg", "0. Infectieux.docx", "docx", "2025-11-27"],
+            ["1lT3A1zjiukZAz3SGJROpvS_jONHQbFWC", "1. Paludisme .pptx.pdf", "pdf", "2025-11-27"],
+            ["1uYuds2EBcmIlR9cdxlrIylB_UDvILMMc", "2. Méningites purulentes corrigé.pdf", "pdf", "2025-11-27"],
+            ["12lv68vrELH8P92KkIbaDayyo5bC0x935", "3. méningites A LIQUIDE CLAIR (3) berbadj.docx", "docx", "2025-11-27"],
+            ["1Tas65BJ49KTMwfmx1SUSftIrnPRa_ZoM", "4. Sepsis Et Choc Septique.pdf", "pdf", "2025-11-27"],
+            ["1Faj39yANXzJ6OHHoNLOTBP60_GvojzRaZ", "5. Sepsis À BGN.pdf", "pdf", "2025-11-27"],
+            ["1IZN57kljl-0vJeRcOp6yDWfSoFYlYZmD", "6. Fièvres typhoïde et paratyphoides polycopié.pdf", "pdf", "2025-11-27"],
+            ["1XIMLlMZzky8Byyn9E0nzqMXQUtx4GSfu", "7. VIH.pdf", "pdf", "2025-11-27"],
+            ["1QZiXgdylU_oN3AvnPnYxJmg6B062G6c8", "8. Choléra.pdf", "pdf", "2025-11-27"],
+            ["1edSFrdE82xRUGQkGYhFr4N5xWI64ZCrZ", "9. Covid 19.pdf", "pdf", "2025-11-27"],
+            ["10E_p4zAYGD4CR6MtR_Dhl5NnUoZSFDdK", "10. Amoebose.pdf", "pdf", "2025-11-27"],
+            ["1chPfWpRX3Vq9f5XHAU8nDcIwr_mQLIq", "11. Zona", "pdf", "2025-11-27"],
+            ["1KVcm7tgx5D6PkydPul93GZ-9sBrRPGee", "12. Poliomyélite_.pdf", "pdf", "2025-11-27"],
+            ["1ow3CQ1v3VTgdimywSggSB0tHhaeR1OcP", "13. Hépatites Virales.pdf", "pdf", "2025-11-27"],
+            ["1XeZNfFT43yAej3hMTRNc8lAMNaFv9CGJ", "14. Leishmaniose poly .pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "1oA5t-Ho1xLU8nsad6ODmKoqmYoj3_OZz", name: "Légal",
+          files: [
+            ["17LWJpJuZyEsot0BOsF2nJ_hF0oBf9LWz", "0. Légal.docx", "docx", "2025-11-27"],
+            ["14elpmEmKtSJ7gVpkihGHK2cQvqKGYQBK", "diagnostic de la mort.pdf", "pdf", "2023-11-11"],
+            ["1-YoRPk5ASHCUdAdyaMbW2KLdv9m73w7q", "Random.pdf", "pdf", "2023-11-11"],
+            ["17IY7YEjVs6kSGs1uMAeWbLDnOcOf_Uo7", "TD medecine legale.pdf", "pdf", "2023-11-11"]
+          ],
+          folders: []
+        },
+        {
+          id: "1JcG_fwrghVna0d0gsSRHsCuwsazPRfZN", name: "NEURO",
+          files: [
+            ["1hEZjCtTicFZbkrY7itXZEXYC-J3sBMm9", "0. NEUROLGIE.docx", "docx", "2025-11-27"],
+            ["1nVN0aHPIHTSPH7FIWD8WunsWhCMIESIt", "1. Épilepsies.pdf", "pdf", "2025-11-27"],
+            ["1IlnzHa29ch6f1UvjdtoEh9zyx1qKSkuD", "2. Syndromes Épileptiques.pdf", "pdf", "2025-11-27"],
+            ["1tydNDkUKDd46MVVQjmP2td-QjsLePbWm", "3. Etats de mal épileptiques.pdf", "pdf", "2025-11-27"],
+            ["1B24LXC_TXySVYP4tYGOekU8MI16N0TQC", "4. Céphalées et migraines.pdf", "pdf", "2025-11-27"],
+            ["1Ew7RWI4a4dQAmzXLAHNCMk_eNgVxrdby", "5. Algies faciales et névralgies.pdf", "pdf", "2025-11-27"],
+            ["1kTaFCkXMc9kdKCexFvb8OyqtMgajSASp", "6. Maladie de Parkinson.pdf", "pdf", "2025-11-27"],
+            ["1pRsrvFOGlKNZEAhf9lbChAsLE6AEBgXT", "7. SYNDROME PYRAMIDAL.pdf", "pdf", "2025-11-27"],
+            ["1gUTxgn1oLdYb8HoPe1sXl2V1EQDfswPi", "8. sd_neurogene_peripherique2020bourezg (4).pptx", "pptx", "2025-11-27"],
+            ["13OE94whLMtFSjwFzRPaL4O5tuNVTODh2", "9. neuropathies peripheriques.pdf", "pdf", "2025-11-27"],
+            ["1k064mE8yJmM1ypN2Q9qhwfgJxweQxsRf", "10. PRNA.pdf", "pdf", "2025-11-27"],
+            ["1SZk5nE67qcFg3EN2hyqk_nq8EHf8phYC", "11. sla pdf (1).docx", "docx", "2025-11-27"],
+            ["1GapicxKEjL06Uc8l1nljdVDTHr8Vmu7J", "12. sd_myogene2020lemdaoui.pdf", "pdf", "2025-11-27"],
+            ["1C0jnkMr0PaV_2p9k_jgAoSnr4ffAXyCX", "13. Myasthenie.pdf", "pdf", "2025-11-27"],
+            ["1-Afs8ZrAJuBFTHTRoq9hJ8FaCyL23KYb", "14. sd_cerebelleux (3).pdf", "pdf", "2025-11-27"],
+            ["1rHpo3P71zivmV1iiHT2vqV23WA36YGao", "15. syndromes neurologiques.pdf", "pdf", "2025-11-27"],
+            ["1mcdD-LcbcA_F4uiJf6UhOxHFGZfvvuQL", "16. CML.pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "16bxaE3esYP6q-p3QvxDeblOrjLbMgGUc", name: "NÉPHRO",
+          files: [
+            ["1gB6EUO3ZgSA65RhgzjhPAb7l2XyyUQiy", "0. Néphrologie.docx", "docx", "2025-11-27"],
+            ["1XWB_pDXxCDD3ZYaj6b0C7jnj31EfIVTl", "1.1 Sd Néphrotique.pdf", "pdf", "2025-11-27"],
+            ["1wbJ-5Zz5ULsAx9XJr5Pvzt6Bp9zVgORU", "1.2 Protéinurie et Syndrome Néphrotique (Poly).pdf", "pdf", "2025-11-27"],
+            ["1FrRnegmgOPDuR1gMAR2O-Y0eTvruyi-g", "2. GNA.pdf", "pdf", "2025-11-27"],
+            ["1Gsfo1OBvuY5BI7f5OnloCH1pnu4jJimP", "3. Néphropathies Glomérulaires (Poly).pdf", "pdf", "2025-11-27"],
+            ["1gn4uznv7EK_v3oJTvjsp56OxVI7CbGos", "4. IRA poly .pdf", "pdf", "2025-11-27"],
+            ["18m_BHDOXSpv7Ksgg6Fd5B-sDUMzA2iS5", "5. IRC.pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "17XoA89f8uT1ENdzj1gFGV7FprIBkh2d_", name: "OPHTHALMO",
+          files: [
+            ["15g6gkuaFe-cLn78KUMG7h4pRzpzS6FBh", "0. Opthalmo.docx", "docx", "2025-11-27"],
+            ["1_if1GKJMn-GaClSFGnemhOmpmFCSjdiu", "1.1 Œil Rouge Douloureux.pdf", "pdf", "2025-11-27"],
+            ["15e7GmrMDZqtk1zhOofdQc4a9tOA4JxSq", "1.2-Œil-rouge-non-douloureux.pptx.pdf", "pdf", "2025-11-27"],
+            ["1gXhZWfoH0YmtE1ZogPFcosRAlo02Jh9i", "2. Glaucome.pdf", "pdf", "2025-11-27"],
+            ["1oHAkl_1aHGZSMRRfvqrsEZkNk-agz6IX", "3. Trachome.pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "1mPuASLOtNO5e2w3te1iQQ5lsGvVLUqFo", name: "ORL",
+          files: [
+            ["11QL9Jen5wftooSK_qAsZ7SzqG1NOisum", "0. ORL1.docx", "docx", "2025-11-27"],
+            ["1gPF6EZZ_4x4wV_G0-CKMEAe_YpTgITmZ9", "1. Angines et rhinopharyngites.pptx.pdf", "pdf", "2025-11-27"],
+            ["1lIxMxlnJRCRBq-E90a-PyomE1H8TcFHu", "2. Vertiges.pdf", "pdf", "2025-11-27"],
+            ["1BbFxxJgIFUumwwQviO3_hiEreDe-75HhI", "3.1 Les épistaxis.pdf", "pdf", "2025-11-27"],
+            ["1teVheiiHO_MKYgxM3q1NglBgoTh3ardI", "3.2 Epistaxis (1).pdf", "pdf", "2025-11-27"],
+            ["1eH8OhpNdot7M7HB74g7NrFoyXvQuo4", "4. Kc Cavum.pdf", "pdf", "2025-11-27"],
+            ["1bo2plDO9srDiPwBvDaRFFq-spXt7f7", "5. Pathologies de l'oreille externe .pdf", "pdf", "2025-11-27"],
+            ["1YJF-XpHcS5G0E1BmtD7l7wM-LF_G", "6. OMA diapo .pdf", "pdf", "2025-11-27"],
+            ["1d3rszQPqqOzVe1woGOvqEA8o2duK7cd1", "7. Les tuméfactions cervicales .pdf", "pdf", "2025-11-27"],
+            ["168rXV2813GE-tob8BtRO_FWBN6lPHLME", "8. Adénopathies Cervicales Chroniques (1).pdf", "pdf", "2025-11-27"],
+            ["1_9XAOWldaBiutrIu9XlYg9gq8E23ZCJI", "9. Dyspnées laryngées_.pdf", "pdf", "2025-11-27"],
+            ["1pQZtDESzhvAaKw0f9wTi3mKlQL3hIQ5l", "10. kc larynx_.pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "1PACdYqlYt04UmHjD4gpSqYjzUlA_Ify0", name: "PEDIATRIE",
+          files: [
+            ["1Eh72Uep9sWKQaAOYDCHsiCKcxzCvUxEi", "0. Pédiatrie.docx", "docx", "2025-11-27"],
+            ["1IVD5Zo6tAJaLMXPcBfVlaLbqxvjHJ8Mm", "1.1 deshydratation_aigue2020amireche.pdf", "pdf", "2025-11-27"],
+            ["12o_YlbqD8PBSB-aE1hOOLWB1S5WptC9y", "1.2 deshydratation aigue Dr boubidi -diapo.pptx.pdf", "pdf", "2025-11-27"],
+            ["1CD2cjo1eUVNUVwzRHXw1XwoT1sENlbhX", "2.1 Diarrhée chronique.pdf", "pdf", "2025-11-27"],
+            ["1szqG3oyn4buFdqFcSsHLf3cW8jtTqYc6", "2.2 Diarrhées Chroniques (Poly).pdf", "pdf", "2025-11-27"],
+            ["1TMsSrqdwBNSCX6XKil0oVOj5clV_dDazn", "3. MPC.pdf", "pdf", "2025-11-27"],
+            ["1P_wgn1fWzQlz6TWtYwoqhnBkQ8_sd3SF", "4. RAA Syndromes Post-Streptococciques (Poly).pdf", "pdf", "2025-11-27"],
+            ["1svln1aMCn7GEix_9wjYxes7P7YGUurWt4", "5.1 Vaccination.pdf", "pdf", "2025-11-27"],
+            ["16KIGAyugNwoav05KVuiACAb50pIh4KdU", "5.2 Vaccination Chez l'Enfant (Poly).pdf", "pdf", "2025-11-27"],
+            ["1sD4oQSRnY6h5ehAiawWxmxX2m9T41gR", "6. Rachitisme carentiel.pdf", "pdf", "2025-11-27"],
+            ["1-i8YaiPu9GQCko_d52enaAglt6kYmmaZ", "7.1 Ictère Du Nn.pdf", "pdf", "2025-11-27"],
+            ["1aRlMUlWKEUodSVNvz25qLdowopM71wYd", "7.2 Ictère Nne cours oran.pdf", "pdf", "2025-11-27"],
+            ["1XB9Qr9fo6JN0bYDghrJaQR6f5C13rZeY", "8. Diabète.pdf", "pdf", "2025-11-27"],
+            ["1ugYhLVH6sc___Wp3VxMTTMfnM7_fJbrS", "9. Rougeole.pdf", "pdf", "2025-11-27"],
+            ["11hRPIFCV-7tqxjXZDPTXzd5f4VjAWPvun", "10. Anemie de l'enfant.pdf", "pdf", "2025-11-27"],
+            ["12XWZQNSaYV36MUwI2Hi4olLMwbz_0kuk", "11. Tuberculose de l'Enfant (Poly).pdf", "pdf", "2025-11-27"],
+            ["1lI54mlbTs_sAEKfAvVt6gaOLMwikN2k9", "12. Asthme de l'Enfant et du Nourrisson (Poly).pdf", "pdf", "2025-11-27"],
+            ["1mYq0e-9iOIQTWCdkKbsFdI3UkXM03G0_", "13. Hypothyroïdie.pdf", "pdf", "2025-11-27"],
+            ["1nMvI3fGyXICQtBHPTkTil4rvcpgoRnrE", "14. Méningite et Méningo-Encéphalite (Poly).pdf", "pdf", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "19s3tP5GbfM8g_v_GYlBfnajeaRlBqODn", name: "PNEUMO",
+          files: [
+            ["1SKbs5448fjqDQnL3zSqWZiDG1XPJ46-0", "0. Pneumo.docx", "docx", "2025-11-27"],
+            ["1oIU_gljKIrOS2Uck-s9j96xh8WfWs86Y", "1. Pleurésie Purulente.pdf", "pdf", "2025-11-26"],
+            ["1P36MVvrABfNyhypM1E2rc0HWudjg6lgv", "2. Pleurésie Hémorragique.pdf", "pdf", "2025-11-26"],
+            ["1ZLMxDmWa80JWp2cB6JcyqIm116Nk9gRS", "3.1 pleuresie liquide clair.pdf", "pdf", "2025-11-26"],
+            ["1OPTh7UDT2ce5g8AI6aNr7i57MTtz7Y8I", "3.2 pleurésie à liquide clair.pdf", "pdf", "2025-11-26"],
+            ["1d-mVnpDegR7eisaCt19QoeSqA3HYLTU9", "4. Pneumothorax (1).pdf", "pdf", "2025-11-26"],
+            ["1jogIGaoOmdlt3oAggzrS2Aq88UdEQ6ld", "5.1 Asthme_bronchique.pdf", "pdf", "2025-11-26"],
+            ["16TaoRr03cnhwTWBLvRRymskOnmjdi2ge", "5.2 PEC de l'asthme aigu.pdf", "pdf", "2025-11-26"],
+            ["1bXPYWWsgRWek3jnguwpnrFw382poX1Er", "6. BPCO .pdf", "pdf", "2025-11-26"],
+            ["1n9UH2xn8Nsx-W2r8QYJs7urbc78w6W0X", "7. emphysème.pdf", "pdf", "2025-11-26"],
+            ["1QRe6BLMtihHAPAPOfpB2yEwDjJNIjffgr", "8. Insuffisance respiratoire chronique.pdf", "pdf", "2025-11-26"],
+            ["1fOz4Q5InQgm77NVe7O7nxc3lXGDRbwHa", "9. La primo infection tuberculeuse.pdf", "pdf", "2025-11-26"],
+            ["1x_Hd8-hvM3XZ79_eqZAriqgicYZwPaX2", "10. LA MILIAIRE TUBERCULEUSE (1).pdf", "pdf", "2025-11-26"],
+            ["1N7LRSRu1NKdlxpXOq54WURIYaYnF_PcS", "11. La tuberculose pulmonaire commune poly (1).pdf", "pdf", "2025-11-26"],
+            ["12daiaZ5ryUHz4RKZNzHZEGMDzDLh3ILj", "12. PNLAT.pdf", "pdf", "2025-11-26"],
+            ["1W1JW_lcZ6P6_xGeEEvWYY-1kZlKcz04P", "13. infection et allergie tuberculse.pdf", "pdf", "2025-11-26"]
+          ],
+          folders: []
+        },
+        {
+          id: "1loRYz8nA3upjJUsPLlzuLDeMgCIULXHe", name: "Psychiatrie",
+          files: [
+            ["1OXYo82rJIMhzMg7LS7F73veQpVZfnTWQ", "0. Psychiatrie.docx", "docx", "2025-11-27"],
+            ["1vCXoq1nG00lDiCje1qpxVc1i5mBW-qFZ", "agitation.pdf", "pdf", "2023-11-12"],
+            ["1txDfOrP54LX-VZ-mys6IlGhX4FP4Z7rn", "Dangerosité.pdf", "pdf", "2023-11-11"],
+            ["1zrl00Z_m-s-7X2etDtvr0zn_2G1S_2", "Délires Chroniques.pdf", "pdf", "2023-11-11"],
+            ["1TbT9ddVnrEUBRaFRg2J9UAxMqxMCJVKb", "dépression.pdf", "pdf", "2023-11-11"],
+            ["1JmEQUuyY9dWEl6S_P_43Z_Q8pziOOdYeN", "Etats confusionnels.pdf", "pdf", "2023-11-12"],
+            ["1Iz-0H5uD9ocGLcgZYDfyDyBbhEcarqWZ", "Personnalités Pathologiques.pdf", "pdf", "2023-11-11"],
+            ["1MgmsRS_2xIbv_RPlD31iU9r3ORKQLBdl", "psychiatrie5an_td-cat_agitation_psychomotrice2022seghir.pdf", "pdf", "2025-11-27"],
+            ["1o6_agiC3Qy1Z0GuTC8m0r5gyupQmJQIg", "Psychoses Aiguës.pdf", "pdf", "2023-11-12"],
+            ["1fAA6OLSQOajJBqzjQBbILtQoonWcQJgt", "psychotropes.pdf", "pdf", "2023-11-12"],
+            ["1KS7mjcuc15_ggdij2ZuPIVvKlqzk3cN9", "schizophrenie.pdf", "pdf", "2023-11-12"],
+            ["1GSay21Y5nE4yfRIcAwrFlTmock1y_ZV7", "Suicide.pdf", "pdf", "2023-11-12"],
+            ["1AfHsE9yYDc3Tc59SZv5CXT4v7hipFr9P", "Troubles Anxieux.pdf", "pdf", "2023-11-12"],
+            ["1xEiKN2Fa_CfV924YV4rMOUoCqU8v5q0T", "Troubles Bipolaires.pdf", "pdf", "2023-11-12"],
+            ["1H4Miyw7wWOh7SefLyHRCiMFL4iyy9Ftl", "Z.pdf", "pdf", "2023-11-12"]
+          ],
+          folders: []
+        },
+        {
+          id: "1RNh8MpvIlA0luXXQ_KXaL-DrqEKdmfrz", name: "RHUMATO",
+          files: [
+            ["1gs_pybCP1h5DDd7y9AyDZ2Zenn5t8nYP", "0. Rhumatologie.docx", "docx", "2025-11-27"],
+            ["1R3pW4RjvbBegoxXj275XonHNMsl6YmW0", "1. Lombosciatiques communes poky .pdf", "pdf", "2025-11-27"],
+            ["1OzlJq0CrLIpdVGCr4Z3wbvi-9AzWVqcs", "2. polyarthrite_rhumatoide2022benzina (1).pptx", "pptx", "2025-11-27"]
+          ],
+          folders: []
+        },
+        {
+          id: "1f7Vx8-lKzb_-rrAQqWRBDy2JOTN4k5rI", name: "TRAVAIL",
+          files: [
+            ["1gs30r7N5HuxmyF5FSuYi0gdmS_hs3xta", "0.Travail.docx", "docx", "2025-11-27"],
+            ["1-7ts0DAQNTHDIjutimx3X68m6RKEEuaa", "1.1 Intoxication au plomb.pdf", "pdf", "2025-11-27"],
+            ["1bM3sRdLJzDs2J9euBJkio9L9GnQH5F8S", "1.2 Intoxications par les principaux métaux. (1).docx", "docx", "2025-11-27"]
+          ],
+          folders: []
+        }
+      ]
+    }
+  ]
+};
+
+/* Programme officiel du Résidanat Constantine (extrait du PDF "programme des cours inclus Résidanat Constantine.pdf")
+   Format : [module, [[sujet officiel, cours équivalent externat], ...]] */
+const PROGRAMME = [
+  ["Biologie", [
+    ["Anapath — L'inflammation", "Processus inflammatoire"],
+    ["Anapath — Thromboses, embolies, infarctus", "Troubles circulatoires / Thrombose / Embolie / Ischémie-Infarctus"],
+    ["Anapath — Classification anatomo-pathologique des tumeurs", "Généralités sur les tumeurs"],
+    ["Anapath — Histoire naturelle des cancers", "Tissu cancéreux / Tumeurs bénignes / Tumeurs épithéliales / Tumeurs non épithéliales"],
+    ["Physiologie cardiaque — L'hémodynamique cardiaque", "Électrophysiologie cardiaque / Cycle cardiaque / Débit cardiaque / Pression artérielle"],
+    ["Physiologie respiratoire — Échanges alvéolo-capillaires", "Ventilation alvéolaire / Échanges gazeux / Rapport ventilation-perfusion / Fonction respiratoire du sang / Régulation de la respiration"],
+    ["Physiologie respiratoire — EFR", "Mécanique ventilatoire (EFR non étudié en externat)"],
+    ["Physiologie rénale — Équilibre acido-basique", "Physiologie rénale + physiopathologie"],
+    ["Physiologie rénale — EFR rénale", "Physiologie rénale"],
+    ["Neurophysiologie — L'influx nerveux", "SNA, Neurone"],
+    ["Neurophysiologie — La transmission synaptique", "Transmission synaptique"],
+    ["Neurophysiologie — Physiologie du muscle", "Muscle"],
+    ["Neurophysiologie — Physiologie des réflexes", "Physiologie des réflexes"],
+    ["Neurophysiologie — Électrogènes corticaux", "Électrogènes corticaux"],
+    ["Neurophysiologie — Somesthésie et douleur", "Somesthésie et douleur"],
+    ["Physiologie digestive — Sécrétion biliaire, pancréatique, absorption intestinale", "Physiologie digestive (phase buccale, déglutition, gastrique, biliaire, pancréatique, intestinale, colique)"],
+    ["Physiologie digestive — EFR hépatique", "Non étudié en externat"],
+    ["Physiologie endocrinienne — Hormones hypophysaires", "Axe hypothalamo-hypophysaire"],
+    ["Physiologie endocrinienne — Hormones thyroïdiennes", "Physiologie de la thyroïde"],
+    ["Physiologie endocrinienne — Hormones cortico-surrénaliennes", "Physiologie des surrénales"],
+    ["Physiologie endocrinienne — Activité gonadique", "Physiologie des gonades"],
+    ["Physiologie endocrinienne — Régulation glycémie / pancréas endocrine", "Régulation métabolisme des glucides"],
+    ["Physiologie endocrinienne — Métabolisme phospho-calcique", "Métabolisme phospho-calcique"],
+    ["Physiologie 1ère année — Compartiments liquidiens", "Compartiments liquidiens"],
+    ["Physiologie 1ère année — Ration alimentaire", "Bioénergétique"],
+    ["Physiologie 1ère année — Interaction ligand-récepteur / membrane plasmique", "Interaction ligand-récepteur / Membrane plasmique"],
+    ["Biochimie — Régulation métabolisme des glucides et protides", "Métabolisme glucides / Régulation protéines"],
+    ["Biochimie — Métabolisme des lipides", "Lipides exploration"],
+    ["Biochimie — Examens biologiques : normes et indications", "Non étudié en externat"],
+    ["Génétique — Matériel héréditaire", "Acides nucléiques / Chromatine / Génome / Gènes"],
+    ["Génétique — Synthèse des protéines", "Traduction / Transcription"],
+    ["Cytologie — Cycle cellulaire", "Noyau et cycle cellulaire"],
+    ["Hématologie — Plasma, hématimétrie, hématopoïèse", "Hémogramme"],
+    ["Hématologie — Hémolyse, anémie hémolytique", "Hémolyse / Anémies hémolytiques"],
+    ["Hématologie — Hémostase", "Hémostase / Transfusion"],
+    ["Hématologie — Groupes sanguins ABO et rhésus", "Groupes sanguins et transfusion sanguine"],
+    ["Immunologie — Réponse immunitaire", "Réponses immunitaires / Cellules de l'immunité"],
+    ["Immunologie — Complément", "Complément"],
+    ["Immunologie — Dysfonctionnements (auto-immunité, hypersensibilités)", "Auto-immunité / Hypersensibilités I à IV"],
+    ["Immunologie — CMH, antigènes, immunoglobulines", "CMH / Antigènes / Immunoglobulines"],
+    ["Médecine légale — Responsabilité médicale", "Responsabilité civile et pénale (Droit)"],
+    ["Médecine légale — Certificats médicaux", "Certificats médicaux (Droit) + TD légal"],
+    ["Médecine légale — Phénomènes cadavériques, syndrome de la mort, diagnostic de la mort, constat de décès", "Diagnostic de la mort + TD médecine légale"]
+  ]],
+  ["Clinique", [
+    ["Cardio — Rhumatisme articulaire aigu", "RAA (cardio + pédiatrie)"],
+    ["Cardio — Troubles du rythme (ACFA, BAV)", "Troubles du rythme / BAV / Troubles de la conduction"],
+    ["Cardio — Hypertension artérielle", "HTA"],
+    ["Cardio — Insuffisance cardiaque, OAP", "Insuffisance cardiaque"],
+    ["Cardio — Insuffisance coronaire (SCA ST+, ST−)", "SCA STEMI / SCA NSTEMI / Définition IDM"],
+    ["Cardio — Valvulopathies rhumatismales", "Insuffisance aortique / mitrale, rétrécissement aortique / mitral"],
+    ["Cardio — Péricardites", "Syndromes péricardiques"],
+    ["Cardio — Endocardites", "Endocardite infectieuse (EI)"],
+    ["Pneumo — Pleurésies (liquide clair, hémorragique, purulente)", "Pleurésie à liquide clair / hémorragique / purulente"],
+    ["Pneumo — Pneumothorax", "Pneumothorax"],
+    ["Pneumo — Tuberculose pulmonaire (diagnostic, traitement, primo-infection, miliaire, commune, PNLAT, allergie)", "Tuberculose pulmonaire / primo-infection / miliaire / PNLAT"],
+    ["Pneumo — Insuffisance respiratoire, BPCO", "Insuffisance respiratoire + BPCO / emphysème"],
+    ["Pneumo — Asthme", "Asthme (pneumo + pédiatrie) / PEC de l'asthme aigu"],
+    ["Infectieux — Paludisme", "Paludisme"],
+    ["Infectieux — Salmonelloses (fièvre typhoïde)", "Fièvres typhoïde et paratyphoïdes"],
+    ["Infectieux — Choléra", "Choléra"],
+    ["Infectieux — Septicémies, sepsis, choc septique, sepsis à BGN", "Sepsis / choc septique / sepsis à BGN"],
+    ["Infectieux — Hépatites virales", "Hépatites virales"],
+    ["Infectieux — Poliomyélite", "Non étudié en externat"],
+    ["Infectieux — Rougeole", "Rougeole (pédiatrie)"],
+    ["Infectieux — Méningites purulentes", "Méningites purulentes (infectieux + pédiatrie)"],
+    ["Infectieux — Zona", "Non étudié en externat"],
+    ["Infectieux — Kala-azar / Leishmaniose viscérale", "Leishmaniose"],
+    ["Infectieux — Amibiase", "Amoebose"],
+    ["Infectieux — MST / VIH", "VIH / MST"],
+    ["Dermato — Eczémas, psoriasis, MST", "Eczéma / Psoriasis / MST"],
+    ["Gastro — Maladie ulcéreuse et complications", "Ulcère gastro-duodénal / complications MUGD"],
+    ["Gastro — Hépatites chroniques, cirrhoses", "Hépatites chroniques / cirrhose"],
+    ["Gastro — Ictères, ascites", "Ictère / Ascite (CAT devant une ascite)"],
+    ["Médecine de travail — Saturnisme", "Intoxication au plomb / métaux lourds"],
+    ["Pédiatrie — Rachitisme", "Rachitisme carentiel"],
+    ["Pédiatrie — Déshydratation aiguë du nourrisson", "Déshydratation aiguë"],
+    ["Pédiatrie — Malnutrition protéino-énergétique, maladie cœliaque", "MPC / diarrhée chronique (maladie cœliaque)"],
+    ["Pédiatrie — Vaccinations", "Vaccination"],
+    ["Pédiatrie — Ictère néonatal", "Ictère du nouveau-né"],
+    ["Rhumato — Polyarthrite chronique évolutive", "Polyarthrite rhumatoïde"],
+    ["Rhumato — Sciatiques", "Lombosciatique"],
+    ["Neuro — Syndromes topographiques, polyneuropathie, myasthénie, PRNA", "Sd myogène / neurogène / cérébelleux / syndromes neurologiques / neuropathies périphériques / Myasthénie / PRNA"],
+    ["Neuro — Céphalées, épilepsie, compressions médullaires, Parkinson", "Céphalées / Épilepsies / syndromes épileptiques / états de mal / CML / Parkinson"],
+    ["Psychiatrie — Névroses, personnalités, psychoses, délires, états dépressifs, CAT dangerosité/agitation/suicide", "Troubles anxieux / Personnalités pathologiques / Schizophrénie / psychoses aiguës / délires chroniques / troubles bipolaires / psychotropes / agitation / dangerosité / suicide"],
+    ["Épidémiologie — Démographie, maladies transmissibles, épidémie, PEV", "Indicateurs de santé / maladies transmissibles / investigation d'une épidémie / PEV"],
+    ["Hématologie — Anémies (carentielles, hémolytiques, néonatale, aplasie)", "Anémies carentielles / hémolytiques / anémie de l'enfant / aplasie médullaire"],
+    ["Hématologie — Purpuras, leucoses, lymphomes, dysglobulinémies, splénomégalie, accidents transfusionnels", "Purpuras / syndromes myéloprolifératifs / leucémies aiguës / lymphoprolifératifs / lymphomes / dysglobulinémies / splénomégalie / groupes sanguins et transfusion"],
+    ["Néphro — Glomérulonéphrites, sd néphrotique/néphritique, insuffisance rénale", "Néphropathies glomérulaires / sd néphrotique / GNA / IRA / IRC"],
+    ["Endocrino — Diabète sucré (définition, complications, insulinothérapie, DT2, enfant)", "Définition diabète / complications aiguës / dégénératives / insulinothérapie / traitement DT2 / diabète de l'enfant"],
+    ["Endocrino — Insuffisance surrénale, pathologie hypophysaire, acromégalie, Cushing, troubles phosphocalciques, thyroïde", "Insuffisance surrénalienne / adénome hypophysaire / acromégalie / Cushing / hyper-hypoparathyroïdie / hyper-hypothyroïdie / nodule thyroïdien"],
+    ["Ophtalmo — Œil rouge, trachome, glaucome", "Œil rouge douloureux / non douloureux / trachome / glaucome"],
+    ["ORL — Angines, OMA, épistaxis, vertiges, ADP cervicales, Kc cavum/larynx", "Angines / OMA / oreille externe / épistaxis / vertiges / adénopathies cervicales / Kc cavum / Kc larynx"]
+  ]],
+  ["Chirurgie", [
+    ["Généralités — Infection et antibiothérapie en chirurgie, choc traumatique", "Infections en chirurgie / antibioprophylaxie / polytrauma"],
+    ["Urgences chirurgicales — Brûlures, polytraumatismes", "Brûlures / polytrauma"],
+    ["Chirurgie digestive — Appendicite, péritonite, traumatisme abdominal, occlusions, hémorragies digestives, pancréatite, hernies étranglées", "Appendicite / péritonites aiguës / trauma abdominal / occlusion intestinale / hémorragies digestives / pancréatite aiguë / hernies"],
+    ["Chirurgie digestive — Lithiase biliaire et complications, ictères par rétention, abcès du foie", "Lithiase biliaire / angiocholite / ictères chirurgicaux / abcès du foie"],
+    ["Chirurgie digestive — Cancers (estomac, colon, rectum, œsophage, foie), kyste hydatique, polypes", "Kc estomac / colon / rectum / œsophage / foie / kyste hydatique / polypes et polyposes"],
+    ["Gynéco — Hémorragies de la délivrance, GEU, HRP, RU, avortements, placenta prævia, MAP", "Délivrance normale et pathologique / GEU / HRP / RU / avortement / placenta prævia / MAP"],
+    ["Gynéco — Cancers utérins, fibromes, kyste ovaire, tumeurs du sein, infections génitales, leucorrhées, MST", "Kc col / Kc endomètre / myomes / tumeurs du sein / kyste ovaire / infections et grossesse / leucorrhées / MST"],
+    ["Neurochirurgie — Traumatismes crâniens", "Trauma crânien"],
+    ["Orthopédie — Rachis, fémur, hanche (LCH, luxation), genou, rotule, jambe, tumeurs osseuses, ostéomyélite, arthrites, Pott, épaule", "Rachis / mal de Pott / fémur / LCH / luxation hanche / genou osseux et ligamentaire / jambe / tumeurs osseuses / infections ostéo-articulaires / épaule"],
+    ["Urologie — HBP, lithiase urinaire, hématuries, rétention urinaire aiguë", "HBP / lithiase urinaire / colique néphrétique / hématurie / rétention aiguë d'urine / Kc vessie"]
+  ]]
+];

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Résidanat Constantine — Bibliothèque de cours</title>
+<style>
+:root{
+  --bg:#f4f7fb; --panel:#ffffff; --panel2:#eef3f9; --text:#0f172a; --muted:#64748b;
+  --border:#dbe4ef; --accent:#0e7490; --accent2:#0891b2; --accent-soft:#e0f2f7;
+  --sidebar:#0f172a; --sidebar-text:#cbd5e1; --sidebar-active:#164e63; --sidebar-hover:#1e293b;
+  --danger:#dc2626; --shadow:0 1px 3px rgba(15,23,42,.08),0 4px 14px rgba(15,23,42,.06);
+  --radius:12px;
+}
+html[data-theme="dark"]{
+  --bg:#0b1220; --panel:#111c2e; --panel2:#16233a; --text:#e2e8f0; --muted:#94a3b8;
+  --border:#1f2d45; --accent:#22d3ee; --accent2:#38bdf8; --accent-soft:#0e3a4a;
+  --sidebar:#0a0f1c; --sidebar-text:#94a3b8; --sidebar-active:#155e75; --sidebar-hover:#141f33;
+  --shadow:0 1px 3px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+button{font-family:inherit;cursor:pointer}
+
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;padding:10px 18px;background:var(--panel);border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;white-space:nowrap}
+.brand .logo{font-size:22px}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:11px}
+.topbar nav{display:flex;gap:6px;margin-left:8px}
+.topbar nav a{padding:7px 12px;border-radius:8px;color:var(--muted);font-weight:600;font-size:13.5px}
+.topbar nav a:hover{background:var(--panel2);text-decoration:none;color:var(--text)}
+.topbar nav a.active{background:var(--accent-soft);color:var(--accent)}
+.search-wrap{flex:1;display:flex;justify-content:center}
+#search{width:min(520px,100%);padding:9px 14px 9px 36px;border:1px solid var(--border);border-radius:999px;background:var(--panel2);color:var(--text);font-size:14px;outline:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center}
+#search:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.icon-btn{border:1px solid var(--border);background:var(--panel2);color:var(--text);border-radius:8px;padding:7px 10px;font-size:15px}
+.icon-btn:hover{border-color:var(--accent)}
+#burger{display:none}
+
+.layout{display:flex;min-height:calc(100vh - 57px)}
+#sidebar{width:300px;flex-shrink:0;background:var(--sidebar);color:var(--sidebar-text);overflow-y:auto;position:sticky;top:57px;height:calc(100vh - 57px);padding:12px 8px}
+#sidebar::-webkit-scrollbar{width:8px}
+#sidebar::-webkit-scrollbar-thumb{background:#334155;border-radius:4px}
+.tree,.tree ul{list-style:none;margin:0;padding-left:0}
+.tree ul{padding-left:14px;border-left:1px solid #1e293b;margin-left:10px}
+.tree li{margin:1px 0}
+.frow{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:8px;cursor:pointer;user-select:none}
+.frow:hover{background:var(--sidebar-hover)}
+.frow.active{background:var(--sidebar-active);color:#fff}
+.frow .tw{width:16px;text-align:center;font-size:10px;color:#64748b;flex-shrink:0}
+.frow .fname{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600;font-size:13.5px}
+.frow .cnt{font-size:10.5px;background:#1e293b;color:#94a3b8;border-radius:999px;padding:1px 7px;flex-shrink:0}
+.frow.active .cnt{background:#0e7490;color:#fff}
+.frow .fico{font-size:13px}
+
+#main{flex:1;padding:26px 32px 60px;max-width:1150px;min-width:0}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:10px}
+.crumb a{color:var(--muted)}
+.crumb a:hover{color:var(--accent)}
+h1{font-size:24px;margin:0 0 4px}
+h2{font-size:19px;margin:26px 0 12px}
+.sub{color:var(--muted);margin:0 0 18px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 20px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:9px;border:1px solid var(--border);background:var(--panel);color:var(--text);font-weight:600;font-size:13.5px}
+.btn:hover{border-color:var(--accent);text-decoration:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.1)}
+.btn.small{padding:5px 10px;font-size:12.5px;border-radius:7px}
+
+.hero{background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);color:#fff;border-radius:var(--radius);padding:28px 30px;margin-bottom:22px;box-shadow:var(--shadow)}
+.hero h1{color:#fff;font-size:26px}
+.hero p{margin:6px 0 0;opacity:.92;max-width:70ch}
+.hero .btn{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.4);color:#fff;margin-top:14px;margin-right:8px}
+.hero .btn:hover{background:rgba(255,255,255,.28)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);display:block;color:var(--text)}
+.card:hover{text-decoration:none;border-color:var(--accent);transform:translateY(-2px);transition:.15s}
+.card .cico{font-size:26px}
+.card .cname{font-weight:700;font-size:16px;margin:8px 0 2px}
+.card .cmeta{color:var(--muted);font-size:13px}
+.card.stat .cnum{font-size:30px;font-weight:800;color:var(--accent)}
+.card.stat .cname{margin:2px 0}
+
+.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:30px 0 12px}
+.section-title h2{margin:0}
+
+.grid-folders{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:8px}
+.folder-card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:14px;display:block;color:var(--text)}
+.folder-card:hover{text-decoration:none;border-color:var(--accent);background:var(--accent-soft)}
+.folder-card .fico{font-size:20px}
+.folder-card .fname{font-weight:700;margin-top:6px;word-break:break-word}
+.folder-card .fmeta{color:var(--muted);font-size:12px;margin-top:2px}
+
+table.files{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+table.files th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);padding:10px 14px;background:var(--panel2);border-bottom:1px solid var(--border)}
+table.files td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:middle}
+table.files tr:last-child td{border-bottom:none}
+table.files tr:hover td{background:var(--panel2)}
+.fname-cell{font-weight:600;min-width:0;word-break:break-word}
+.fname-cell .star{color:#f59e0b;margin-right:4px}
+.badge{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;letter-spacing:.03em}
+.b-pdf{background:#fee2e2;color:#b91c1c}
+.b-docx{background:#dbeafe;color:#1d4ed8}
+.b-pptx,.b-ppt{background:#ffedd5;color:#c2410c}
+.b-img{background:#ede9fe;color:#6d28d9}
+.b-other{background:#e2e8f0;color:#475569}
+html[data-theme="dark"] .b-pdf{background:#4c1d1d;color:#fca5a5}
+html[data-theme="dark"] .b-docx{background:#1e3a5f;color:#93c5fd}
+html[data-theme="dark"] .b-pptx,html[data-theme="dark"] .b-ppt{background:#4a2c12;color:#fdba74}
+html[data-theme="dark"] .b-img{background:#3b2f63;color:#c4b5fd}
+html[data-theme="dark"] .b-other{background:#263349;color:#94a3b8}
+.date-cell{color:var(--muted);font-size:12.5px;white-space:nowrap}
+.row-actions{white-space:nowrap;text-align:right}
+
+.empty{padding:40px;text-align:center;color:var(--muted);background:var(--panel);border:1px dashed var(--border);border-radius:var(--radius)}
+.result-group{margin-bottom:22px}
+.result-group h3{margin:0 0 8px;font-size:15px}
+.result-group h3 a{color:var(--text)}
+.result-group h3 span{color:var(--muted);font-weight:500;font-size:13px}
+
+.prog-module{margin-bottom:26px}
+.prog-module>h2{background:var(--panel);border:1px solid var(--border);border-left:4px solid var(--accent);padding:10px 14px;border-radius:9px}
+table.prog{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+table.prog th{text-align:left;padding:9px 12px;background:var(--panel2);border-bottom:1px solid var(--border);font-size:12.5px;color:var(--muted)}
+table.prog td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top;font-size:14px}
+table.prog tr:last-child td{border-bottom:none}
+.topic{font-weight:600;width:34%}
+.equiv{color:var(--muted);width:33%}
+.match-chip{display:inline-block;margin:2px 4px 2px 0;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:12.5px;font-weight:600;border:1px solid transparent}
+.match-chip:hover{text-decoration:none;border-color:var(--accent)}
+.note-hors{color:var(--danger);font-size:12.5px;font-weight:600}
+
+#previewModal{position:fixed;inset:0;z-index:100;display:none;background:rgba(2,6,23,.66);backdrop-filter:blur(3px)}
+#previewModal.open{display:block}
+.pm-box{position:absolute;inset:3% 4%;background:var(--panel);border-radius:14px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.pm-head{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border)}
+.pm-title{flex:1;font-weight:700;font-size:14.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pm-head .btn{padding:6px 11px;font-size:12.5px}
+.pm-body{flex:1;background:var(--panel2)}
+.pm-body iframe{width:100%;height:100%;border:0;display:block}
+
+.kbd{font-size:11px;border:1px solid var(--border);border-bottom-width:2px;border-radius:5px;padding:1px 6px;color:var(--muted);background:var(--panel2)}
+footer{color:var(--muted);font-size:12.5px;text-align:center;padding:26px 0 10px}
+
+@media (max-width:960px){
+  #burger{display:block}
+  #sidebar{position:fixed;left:0;top:57px;z-index:60;transform:translateX(-105%);transition:transform .2s;box-shadow:var(--shadow)}
+  #sidebar.open{transform:translateX(0)}
+  .topbar nav{display:none}
+  #main{padding:18px 14px 50px}
+  .pm-box{inset:0;border-radius:0}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <button id="burger" class="icon-btn" title="Menu">☰</button>
+  <div class="brand"><span class="logo">🩺</span><span>Résidanat Constantine<small>Bibliothèque de cours — Dr Rawnek Saoudi</small></span></div>
+  <nav>
+    <a href="#/" data-nav="home">Accueil</a>
+    <a href="#/programme" data-nav="programme">Programme officiel</a>
+  </nav>
+  <div class="search-wrap"><input id="search" type="search" placeholder="Rechercher un cours… ( / )" autocomplete="off"></div>
+  <a class="btn small" href="https://drive.google.com/drive/folders/1bnCf1RAuFTEUt51kd8eY16oTeOAUM8ns" target="_blank" rel="noopener" title="Ouvrir le Drive original">☁️ Drive</a>
+  <button id="themeBtn" class="icon-btn" title="Changer de thème">🌙</button>
+</header>
+<div class="layout">
+  <aside id="sidebar"><ul class="tree" id="tree"></ul></aside>
+  <main id="main"></main>
+</div>
+<div id="previewModal">
+  <div class="pm-box">
+    <div class="pm-head">
+      <span class="pm-title" id="pmTitle"></span>
+      <a class="btn" id="pmOpen" href="#" target="_blank" rel="noopener">Ouvrir dans Drive ↗</a>
+      <a class="btn" id="pmDl" href="#" download>⬇ Télécharger</a>
+      <button class="btn" id="pmClose">✕</button>
+    </div>
+    <div class="pm-body"><iframe id="pmFrame" title="Aperçu" loading="lazy"></iframe></div>
+  </div>
+</div>
+<script src="data.js"></script>
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm = s => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9]+/g," ").trim();
+const fileView = id => "https://drive.google.com/file/d/"+id+"/view";
+const filePrev = id => "https://drive.google.com/file/d/"+id+"/preview";
+const fileDl   = id => "https://drive.google.com/uc?export=download&id="+id;
+const folderUrl= id => "https://drive.google.com/drive/folders/"+id;
+function natCmp(a,b){
+  const pa=a.split(/(\d+)/), pb=b.split(/(\d+)/);
+  for(let i=0;i<Math.max(pa.length,pb.length);i++){
+    const x=pa[i]||"", y=pb[i]||"";
+    if(x===y) continue;
+    const nx=parseInt(x,10), ny=parseInt(y,10);
+    if(!isNaN(nx)&&!isNaN(ny)&&x.trim()!==""&&y.trim()!=="") return nx-ny;
+    return x.localeCompare(y, "fr");
+  }
+  return 0;
+}
+const TYPE_ICON = {pdf:["PDF","b-pdf","📄"], docx:["DOCX","b-docx","📘"], pptx:["PPTX","b-pptx","📊"], ppt:["PPT","b-ppt","📊"], jpg:["IMG","b-img","🖼️"], png:["IMG","b-img","🖼️"], jpeg:["IMG","b-img","🖼️"]};
+function typeBadge(t){ const e=TYPE_ICON[t]||["FILE","b-other","📎"]; return `<span class="badge ${e[1]}">${e[0]}</span>`; }
+function typeIcon(t){ const e=TYPE_ICON[t]||["","","📎"]; return e[2]; }
+
+/* Index aplati */
+const FOLDER_MAP = {};   // id -> {name, path:[names], node}
+const FILE_INDEX = [];   // {id,name,type,date,norm,path:[names],folderId}
+function countFiles(f){ return f.files.length + f.folders.reduce((a,g)=>a+countFiles(g),0); }
+(function build(){
+  function rec(node, path){
+    FOLDER_MAP[node.id] = {name:node.name, path:path.slice(), node};
+    node.files.forEach(ff=>FILE_INDEX.push({id:ff[0], name:ff[1], type:ff[2], date:ff[3]||"", norm:norm(ff[1]), path:path.slice(), folderId:node.id}));
+    node.folders.forEach(ch=>rec(ch, path.concat(ch.name)));
+  }
+  rec(TREE, [TREE.name]);
+})();
+const TOTAL_FILES = FILE_INDEX.length;
+const TOTAL_FOLDERS = Object.keys(FOLDER_MAP).length;
+const openSet = new Set([TREE.id, ...TREE.folders.map(f=>f.id)]);
+let currentRoute = "home";
+let searchMode = false;
+
+const STOP = new Set("le la les de du des et en au aux un une son sa ses leur leurs cours poly diapo notes note partie non etudié externat devant td cat trt dgc trt partie ou a d l s c est sont plus avec sans sous sur".split(" "));
+function matchCourses(query){
+  const words = norm(query).split(" ").filter(w=>w.length>=3 && !STOP.has(w));
+  if(!words.length) return [];
+  const scored = [];
+  for(const f of FILE_INDEX){
+    let score = 0;
+    for(const w of words){ if(f.norm.includes(w)) score++; }
+    if(score>0) scored.push({f, score});
+  }
+  scored.sort((a,b)=>b.score-a.score || natCmp(a.f.name,b.f.name));
+  return scored.slice(0,3).map(s=>s.f);
+}
+</script>
+<script>
+"use strict";
+/* ---------- Arbre latéral ---------- */
+function renderTree(){
+  const ul = $("#tree");
+  ul.innerHTML = "";
+  function item(node){
+    const li = document.createElement("li");
+    const row = document.createElement("div");
+    row.className = "frow" + (currentRoute==="f"+node.id ? " active" : "");
+    const hasChildren = node.folders.length>0;
+    const open = openSet.has(node.id);
+    row.innerHTML = `<span class="tw">${hasChildren ? (open?"▼":"▶") : ""}</span><span class="fico">📁</span><span class="fname">${esc(node.name)}</span><span class="cnt">${countFiles(node)}</span>`;
+    row.addEventListener("click", e=>{
+      if(currentRoute === "f"+node.id){ openSet.has(node.id) ? openSet.delete(node.id) : openSet.add(node.id); renderTree(); return; }
+      location.hash = "#/f/"+node.id;
+    });
+    li.appendChild(row);
+    if(hasChildren && open){
+      const sub = document.createElement("ul");
+      node.folders.forEach(ch=>sub.appendChild(item(ch)));
+      li.appendChild(sub);
+    }
+    return li;
+  }
+  ul.appendChild(item(TREE));
+}
+
+/* ---------- Vues ---------- */
+function crumb(path){
+  return `<div class="crumb">${path.map((p,i)=>{
+    const fid = i===0 ? TREE.id : Object.keys(FOLDER_MAP).find(k=>FOLDER_MAP[k].path.join("/")===path.slice(0,i+1).join("/"));
+    return `<a href="#${i===0?"/":"/f/"+fid}">${esc(p)}</a>`;
+  }).join(" &nbsp;›&nbsp; ")}</div>`;
+}
+
+function fileRow(f, showPath){
+  const star = /conseil/i.test(f.name) ? '<span class="star" title="Fiche conseils">⭐</span>' : "";
+  return `<tr>
+    <td class="fname-cell"><a href="javascript:void(0)" data-preview="${f.id}">${star}${esc(f.name)}</a></td>
+    <td>${typeBadge(f.type)}</td>
+    <td class="date-cell">${esc(f.date||"—")}</td>
+    <td class="row-actions">
+      <button class="btn small" data-preview="${f.id}">👁 Aperçu</button>
+      <a class="btn small" href="${fileView(f.id)}" target="_blank" rel="noopener">↗</a>
+    </td>
+  </tr>`;
+}
+
+function filesTable(list, showPath){
+  if(!list.length) return `<div class="empty">Aucun fichier ici.</div>`;
+  return `<table class="files"><thead><tr><th>Nom du fichier</th><th>Type</th><th>Modifié</th><th style="text-align:right">Actions</th></tr></thead><tbody>`
+    + list.map(f=>fileRow(f)).join("") + `</tbody></table>`;
+}
+
+function renderHome(){
+  currentRoute = "home";
+  const main = $("#main");
+  const pillars = TREE.folders.map(p=>{
+    const info = FOLDER_MAP[p.id];
+    return `<a class="card" href="#/f/${p.id}">
+      <div class="cico">${p.name==="BIOLOGIE"?"🧬":p.name==="CHIRURGIE"?"🔪":"🩺"}</div>
+      <div class="cname">${esc(p.name)}</div>
+      <div class="cmeta">${countFiles(p)} fichiers · ${p.folders.length} spécialités</div>
+    </a>`;
+  }).join("");
+  const recent = FILE_INDEX.slice().sort((a,b)=> (b.date||"").localeCompare(a.date||"") || natCmp(a.name,b.name)).slice(0,12);
+  const conseils = FILE_INDEX.filter(f=>/conseil/i.test(f.name)).sort((a,b)=>natCmp(a.name,b.name));
+  const prog = TREE.files[0];
+  main.innerHTML = `
+    <div class="hero">
+      <h1>Résidanat Constantine — Tous les cours en un seul endroit</h1>
+      <p>Bibliothèque organisée des polycopiés, diapos et fiches conseils du Drive « ${esc(TREE.name)} » : Biologie, Chirurgie et Clinique. Recherchez, naviguez par spécialité, ouvrez le programme officiel et lancez l'aperçu d'un cours en un clic.</p>
+      <a class="btn" href="#/programme">📋 Voir le programme officiel du résidanat</a>
+      <a class="btn" href="${fileView(prog[0])}" target="_blank" rel="noopener">📄 Ouvrir le PDF programme</a>
+    </div>
+    <div class="cards">
+      ${pillars}
+      <div class="card stat"><div class="cnum">${TOTAL_FILES}</div><div class="cname">fichiers</div><div class="cmeta">dans ${TOTAL_FOLDERS} dossiers</div></div>
+    </div>
+    <div class="section-title"><h2>📋 Programme officiel du résidanat</h2><a class="btn small" href="#/programme">Ouvrir la page programme →</a></div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <iframe src="${filePrev(prog[0])}" style="width:100%;height:520px;border:0" loading="lazy" title="Programme des cours"></iframe>
+    </div>
+    <div class="section-title"><h2>⭐ Fiches « conseils » par spécialité</h2></div>
+    <table class="files"><thead><tr><th>Fiche</th><th>Dossier</th><th>Type</th><th style="text-align:right">Actions</th></tr></thead><tbody>
+    ${conseils.map(f=>`<tr><td class="fname-cell"><a href="javascript:void(0)" data-preview="${f.id}">⭐ ${esc(f.name)}</a></td><td class="date-cell">${esc(f.path.slice(1).join(" › "))}</td><td>${typeBadge(f.type)}</td><td class="row-actions"><button class="btn small" data-preview="${f.id}">👁 Aperçu</button> <a class="btn small" href="${fileView(f.id)}" target="_blank" rel="noopener">↗</a></td></tr>`).join("")}
+    </tbody></table>
+    <div class="section-title"><h2>🕒 Ajoutés / modifiés récemment</h2></div>
+    ${filesTable(recent)}
+    <footer>Site généré à partir du Drive public « ${esc(TREE.name)} » — snapshot du 24/11/2026. Les fichiers restent hébergés sur Google Drive ; ce site fonctionne hors ligne (sauf aperçus et liens Drive).</footer>`;
+  bindPreview();
+}
+
+function renderFolder(id){
+  const info = FOLDER_MAP[id];
+  if(!info){ location.hash = "#/"; return; }
+  currentRoute = "f"+id;
+  openSet.add(id);
+  const node = info.node;
+  const main = $("#main");
+  const sub = node.folders.map(ch=>`<a class="folder-card" href="#/f/${ch.id}"><div class="fico">📁</div><div class="fname">${esc(ch.name)}</div><div class="fmeta">${countFiles(ch)} fichiers</div></a>`).join("");
+  const files = node.files.slice().sort((a,b)=>natCmp(a[1],b[1]));
+  main.innerHTML = `
+    ${crumb(info.path)}
+    <h1>📁 ${esc(info.name)}</h1>
+    <p class="sub">${files.length} fichier(s) · ${node.folders.length} sous-dossier(s)</p>
+    <div class="toolbar">
+      <a class="btn primary" href="${folderUrl(id)}" target="_blank" rel="noopener">☁️ Ouvrir dans Google Drive ↗</a>
+    </div>
+    ${node.folders.length?`<h2>Sous-dossiers</h2><div class="grid-folders">${sub}</div>`:""}
+    <h2>Fichiers</h2>
+    ${filesTable(files.map(f=>({id:f[0],name:f[1],type:f[2],date:f[3]})))}
+    <footer>Source : <a href="${folderUrl(id)}" target="_blank" rel="noopener">dossier Drive « ${esc(info.name)} »</a></footer>`;
+  bindPreview();
+  renderTree();
+}
+
+function renderSearch(q){
+  searchMode = true;
+  const nq = norm(q);
+  const main = $("#main");
+  const terms = nq.split(" ").filter(Boolean);
+  const results = FILE_INDEX.filter(f=>terms.every(t=>f.norm.includes(t)));
+  const byFolder = {};
+  results.forEach(f=>{ (byFolder[f.folderId]=byFolder[f.folderId]||[]).push(f); });
+  const groups = Object.entries(byFolder).sort((a,b)=>natCmp(FOLDER_MAP[a[0]].path.join("/"), FOLDER_MAP[b[0]].path.join("/")));
+  main.innerHTML = `
+    <h1>🔎 Résultats pour « ${esc(q)} »</h1>
+    <p class="sub">${results.length} fichier(s) trouvé(s) sur ${TOTAL_FILES}</p>
+    ${groups.length===0?`<div class="empty">Aucun résultat. Essayez « diabète », « cœur », « tuberculose », « fracture »…</div>`:
+      groups.map(([fid,list])=>{
+        const info=FOLDER_MAP[fid];
+        return `<div class="result-group"><h3><a href="#/f/${fid}">📁 ${esc(info.path.slice(1).join(" › ")||info.name)}</a> <span>(${list.length})</span></h3>
+        <table class="files"><tbody>${list.sort((a,b)=>natCmp(a.name,b.name)).map(f=>fileRow(f)).join("")}</tbody></table></div>`;
+      }).join("")}`;
+  bindPreview();
+}
+
+function renderProgramme(){
+  currentRoute = "programme";
+  const main = $("#main");
+  const prog = TREE.files[0];
+  main.innerHTML = `
+    <div class="crumb"><a href="#/">Accueil</a> &nbsp;›&nbsp; Programme officiel</div>
+    <h1>📋 Programme officiel du Résidanat Constantine</h1>
+    <p class="sub">Correspondance entre les sujets officiels du résidanat et les cours de l'externat disponibles dans la bibliothèque. Cliquez sur un cours pour l'ouvrir en aperçu. — <a href="${fileView(prog[0])}" target="_blank" rel="noopener">PDF original ↗</a></p>
+    ${PROGRAMME.map(([mod,rows])=>`
+      <div class="prog-module"><h2>${esc(mod)}</h2>
+      <table class="prog"><thead><tr><th>Sujet officiel (résidanat)</th><th>Équivalent cours externat</th><th>Cours disponible</th></tr></thead><tbody>
+      ${rows.map(([topic,eq])=>{
+        const hors = /non étudié/i.test(eq);
+        const matches = hors ? [] : matchCourses(eq);
+        return `<tr><td class="topic">${esc(topic)}</td>
+          <td class="equiv">${esc(eq)}</td>
+          <td>${hors?`<span class="note-hors">hors programme externat</span>`: matches.length? matches.map(f=>`<a class="match-chip" href="javascript:void(0)" data-preview="${f.id}" title="${esc(f.path.slice(1).join(" › "))}">${typeIcon(f.type)} ${esc(f.name.replace(/\.(pdf|docx|pptx|ppt|jpg)$/i,""))}</a>`).join("") : `<span style="color:var(--muted)">—</span>`}</td></tr>`;
+      }).join("")}
+      </tbody></table></div>`).join("")}
+    <footer>Source : « ${esc(prog[1])} » — <a href="${fileView(prog[0])}" target="_blank" rel="noopener">voir le PDF ↗</a></footer>`;
+  bindPreview();
+}
+
+/* ---------- Aperçu (modal) ---------- */
+function openPreview(id){
+  const f = FILE_INDEX.find(x=>x.id===id) || {name:id};
+  $("#pmTitle").textContent = f.name;
+  $("#pmOpen").href = fileView(id);
+  $("#pmDl").href = fileDl(id);
+  $("#pmFrame").src = filePrev(id);
+  $("#previewModal").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closePreview(){
+  $("#previewModal").classList.remove("open");
+  $("#pmFrame").src = "about:blank";
+  document.body.style.overflow = "";
+}
+function bindPreview(){
+  document.querySelectorAll("[data-preview]").forEach(el=>{
+    el.addEventListener("click", e=>{ e.preventDefault(); openPreview(el.getAttribute("data-preview")); });
+  });
+}
+
+/* ---------- Routeur ---------- */
+function route(){
+  const h = location.hash || "#/";
+  searchMode = false;
+  $("#search").value = "";
+  if(h === "#/programme"){ renderProgramme(); }
+  else if(h.startsWith("#/f/")){ renderFolder(h.slice(4)); }
+  else { renderHome(); }
+  renderTree();
+  document.querySelectorAll("[data-nav]").forEach(a=>a.classList.toggle("active", (a.dataset.nav==="programme") === (h==="#/programme")));
+  $("#main").scrollTop = 0; window.scrollTo(0,0);
+  $("#sidebar").classList.remove("open");
+}
+
+/* ---------- Événements ---------- */
+window.addEventListener("hashchange", route);
+$("#search").addEventListener("input", e=>{
+  const q = e.target.value.trim();
+  if(q.length >= 2){ renderSearch(q); }
+  else if(searchMode){ searchMode=false; route(); }
+});
+document.addEventListener("keydown", e=>{
+  if(e.key === "/" && document.activeElement !== $("#search")){ e.preventDefault(); $("#search").focus(); }
+  if(e.key === "Escape"){ closePreview(); }
+});
+$("#pmClose").addEventListener("click", closePreview);
+$("#previewModal").addEventListener("click", e=>{ if(e.target.id==="previewModal") closePreview(); });
+$("#burger").addEventListener("click", ()=>$("#sidebar").classList.toggle("open"));
+$("#themeBtn").addEventListener("click", ()=>{
+  const h = document.documentElement;
+  const next = h.dataset.theme === "dark" ? "light" : "dark";
+  h.dataset.theme = next;
+  $("#themeBtn").textContent = next === "dark" ? "☀️" : "🌙";
+  localStorage.setItem("rc-theme", next);
+});
+(function initTheme(){
+  const t = localStorage.getItem("rc-theme");
+  if(t){ document.documentElement.dataset.theme = t; $("#themeBtn").textContent = t==="dark"?"☀️":"🌙"; }
+})();
+route();
+</script>
+</body>
+</html>
