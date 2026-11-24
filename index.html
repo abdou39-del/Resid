@@ -133,6 +133,25 @@ table.prog tr:last-child td{border-bottom:none}
 .match-chip{display:inline-block;margin:2px 4px 2px 0;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:12.5px;font-weight:600;border:1px solid transparent}
 .match-chip:hover{text-decoration:none;border-color:var(--accent)}
 .note-hors{color:var(--danger);font-size:12.5px;font-weight:600}
+.chk{width:26px;height:26px;border-radius:8px;border:1px solid var(--border);background:var(--panel2);color:var(--muted);font-size:13px;line-height:1;padding:0}
+.chk.on{background:var(--accent);border-color:var(--accent);color:#fff}
+tr.done td{opacity:.55}
+tr.done .fname-cell a{text-decoration:line-through}
+.prog-check{width:17px;height:17px;accent-color:var(--accent);cursor:pointer}
+.cchk{text-align:center}
+.pbar{height:14px;background:var(--panel2);border:1px solid var(--border);border-radius:999px;overflow:hidden;margin-top:6px}
+.pfill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .3s}
+.modbar{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;margin:10px 0;box-shadow:var(--shadow)}
+.modname{font-weight:700;font-size:14px}
+.filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 10px}
+.filter-bar .active{background:var(--accent);border-color:var(--accent);color:#fff}
+.plist{display:flex;flex-direction:column;gap:6px}
+.pitem{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:9px 12px}
+.pitem.done{opacity:.55}
+.pitem.done .pl span{text-decoration:line-through}
+.pl{display:flex;align-items:center;gap:8px;font-weight:600;flex:1;min-width:220px;cursor:pointer}
+.pq{display:flex;align-items:center;gap:5px;color:var(--muted);font-size:12.5px;font-weight:700;cursor:pointer}
+.pm{color:var(--muted);font-size:12px;width:100%}
 
 #previewModal{position:fixed;inset:0;z-index:100;display:none;background:rgba(2,6,23,.66);backdrop-filter:blur(3px)}
 #previewModal.open{display:block}
@@ -162,6 +181,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:26px 0 10px
   <div class="brand"><span class="logo">🩺</span><span>Résidanat Constantine<small>Bibliothèque de cours — Dr Rawnek Saoudi</small></span></div>
   <nav>
     <a href="#/" data-nav="home">Accueil</a>
+    <a href="#/progression" data-nav="progression">📊 Progression</a>
     <a href="#/programme" data-nav="programme">Programme officiel</a>
   </nav>
   <div class="search-wrap"><input id="search" type="search" placeholder="Rechercher un cours… ( / )" autocomplete="off"></div>
@@ -239,6 +259,18 @@ function matchCourses(query){
   scored.sort((a,b)=>b.score-a.score || natCmp(a.f.name,b.f.name));
   return scored.slice(0,3).map(s=>s.f);
 }
+
+/* ---------- Suivi de progression (localStorage) ---------- */
+const PROG_KEY = "rc-progress-v1";
+let PROG = { rows: {}, files: {} };
+function loadProg(){ try{ const p = JSON.parse(localStorage.getItem(PROG_KEY)); if(p){ PROG.rows = p.rows||{}; PROG.files = p.files||{}; } }catch(e){} }
+function saveProg(){ try{ localStorage.setItem(PROG_KEY, JSON.stringify(PROG)); }catch(e){} }
+function rowId(mi, ri){ return mi + "-" + ri; }
+function progStats(){
+  let d=0, q=0, t=0;
+  PROGRAMME.forEach((m,mi)=>m[1].forEach((r,ri)=>{ t++; const s=PROG.rows[rowId(mi,ri)]; if(s&&s.done)d++; if(s&&s.qcm)q++; }));
+  return { done:d, qcm:q, total:t, files:Object.keys(PROG.files).length };
+}
 </script>
 <script>
 "use strict";
@@ -279,6 +311,7 @@ function crumb(path){
 function fileRow(f, showPath){
   const star = /conseil/i.test(f.name) ? '<span class="star" title="Fiche conseils">⭐</span>' : "";
   return `<tr>
+    <td style="width:36px"><button class="chk${PROG.files[f.id]?" on":""}" data-done="${f.id}" title="Marquer comme fait">${PROG.files[f.id]?"✓":"○"}</button></td>
     <td class="fname-cell"><a href="javascript:void(0)" data-preview="${f.id}">${star}${esc(f.name)}</a></td>
     <td>${typeBadge(f.type)}</td>
     <td class="date-cell">${esc(f.date||"—")}</td>
@@ -291,12 +324,14 @@ function fileRow(f, showPath){
 
 function filesTable(list, showPath){
   if(!list.length) return `<div class="empty">Aucun fichier ici.</div>`;
-  return `<table class="files"><thead><tr><th>Nom du fichier</th><th>Type</th><th>Modifié</th><th style="text-align:right">Actions</th></tr></thead><tbody>`
+  return `<table class="files"><thead><tr><th style="width:36px" title="Fait"></th><th>Nom du fichier</th><th>Type</th><th>Modifié</th><th style="text-align:right">Actions</th></tr></thead><tbody>`
     + list.map(f=>fileRow(f)).join("") + `</tbody></table>`;
 }
 
 function renderHome(){
   currentRoute = "home";
+  const st = progStats();
+  const pct = st.total ? Math.round(100*st.done/st.total) : 0;
   const main = $("#main");
   const pillars = TREE.folders.map(p=>{
     const info = FOLDER_MAP[p.id];
@@ -314,10 +349,12 @@ function renderHome(){
       <h1>Résidanat Constantine — Tous les cours en un seul endroit</h1>
       <p>Bibliothèque organisée des polycopiés, diapos et fiches conseils du Drive « ${esc(TREE.name)} » : Biologie, Chirurgie et Clinique. Recherchez, naviguez par spécialité, ouvrez le programme officiel et lancez l'aperçu d'un cours en un clic.</p>
       <a class="btn" href="#/programme">📋 Voir le programme officiel du résidanat</a>
+      <a class="btn" href="#/progression">📊 Ma progression (${pct}%)</a>
       <a class="btn" href="${fileView(prog[0])}" target="_blank" rel="noopener">📄 Ouvrir le PDF programme</a>
     </div>
     <div class="cards">
       ${pillars}
+      <a class="card stat" href="#/progression"><div class="cnum">${pct}%</div><div class="cname">du programme fait</div><div class="cmeta">${st.done}/${st.total} sujets · ${st.qcm} QCM · ${st.files} fichiers ✓</div></a>
       <div class="card stat"><div class="cnum">${TOTAL_FILES}</div><div class="cname">fichiers</div><div class="cmeta">dans ${TOTAL_FOLDERS} dossiers</div></div>
     </div>
     <div class="section-title"><h2>📋 Programme officiel du résidanat</h2><a class="btn small" href="#/programme">Ouvrir la page programme →</a></div>
@@ -387,14 +424,16 @@ function renderProgramme(){
     <div class="crumb"><a href="#/">Accueil</a> &nbsp;›&nbsp; Programme officiel</div>
     <h1>📋 Programme officiel du Résidanat Constantine</h1>
     <p class="sub">Correspondance entre les sujets officiels du résidanat et les cours de l'externat disponibles dans la bibliothèque. Cliquez sur un cours pour l'ouvrir en aperçu. — <a href="${fileView(prog[0])}" target="_blank" rel="noopener">PDF original ↗</a></p>
-    ${PROGRAMME.map(([mod,rows])=>`
+    ${PROGRAMME.map(([mod,rows],mi)=>`
       <div class="prog-module"><h2>${esc(mod)}</h2>
-      <table class="prog"><thead><tr><th>Sujet officiel (résidanat)</th><th>Équivalent cours externat</th><th>Cours disponible</th></tr></thead><tbody>
-      ${rows.map(([topic,eq])=>{
+      <table class="prog"><thead><tr><th style="width:40px" title="Cours fait">✓</th><th>Sujet officiel (résidanat)</th><th>Équivalent cours externat</th><th style="width:52px" title="QCM fait">QCM</th><th>Cours disponible</th></tr></thead><tbody>
+      ${rows.map(([topic,eq],ri)=>{
         const hors = /non étudié/i.test(eq);
         const matches = hors ? [] : matchCourses(eq);
-        return `<tr><td class="topic">${esc(topic)}</td>
+        const rid = rowId(mi,ri), rs = PROG.rows[rid]||{};
+        return `<tr class="${rs.done?"done":""}"><td class="cchk"><input type="checkbox" class="prog-check" data-row="${rid}" data-kind="done" ${rs.done?"checked":""}></td><td class="topic">${esc(topic)}</td>
           <td class="equiv">${esc(eq)}</td>
+          <td class="cchk"><input type="checkbox" class="prog-check" data-row="${rid}" data-kind="qcm" ${rs.qcm?"checked":""}></td>
           <td>${hors?`<span class="note-hors">hors programme externat</span>`: matches.length? matches.map(f=>`<a class="match-chip" href="javascript:void(0)" data-preview="${f.id}" title="${esc(f.path.slice(1).join(" › "))}">${typeIcon(f.type)} ${esc(f.name.replace(/\.(pdf|docx|pptx|ppt|jpg)$/i,""))}</a>`).join("") : `<span style="color:var(--muted)">—</span>`}</td></tr>`;
       }).join("")}
       </tbody></table></div>`).join("")}
@@ -423,16 +462,68 @@ function bindPreview(){
   });
 }
 
+/* ---------- Page Progression ---------- */
+let progFilter = "all";
+function renderProgression(){
+  currentRoute = "progression";
+  const st = progStats();
+  const pct = st.total ? Math.round(100*st.done/st.total) : 0;
+  const qpct = st.total ? Math.round(100*st.qcm/st.total) : 0;
+  const mods = PROGRAMME.map(([mod,rows],mi)=>{
+    let d=0, q=0;
+    rows.forEach((r,ri)=>{ const s=PROG.rows[rowId(mi,ri)]; if(s&&s.done)d++; if(s&&s.qcm)q++; });
+    return { mod, d, q, total: rows.length };
+  });
+  const items = [];
+  PROGRAMME.forEach(([mod,rows],mi)=>rows.forEach(([topic,eq],ri)=>{
+    const rid = rowId(mi,ri), rs = PROG.rows[rid]||{};
+    if(progFilter==="todo" && rs.done) return;
+    if(progFilter==="done" && !rs.done) return;
+    const matches = /non étudié/i.test(eq) ? [] : matchCourses(eq);
+    items.push(`<div class="pitem${rs.done?" done":""}">
+      <label class="pl"><input type="checkbox" class="prog-check" data-row="${rid}" data-kind="done" ${rs.done?"checked":""}> <span>${esc(topic)}</span></label>
+      <label class="pq">QCM <input type="checkbox" class="prog-check" data-row="${rid}" data-kind="qcm" ${rs.qcm?"checked":""}></label>
+      <span class="pm">${esc(mod)}${matches.length?" · "+matches.map(f=>`<a class="match-chip" href="javascript:void(0)" data-preview="${f.id}">${typeIcon(f.type)} ${esc(f.name.replace(/\.(pdf|docx|pptx|ppt|jpg)$/i,""))}</a>`).join(""):""}</span>
+    </div>`);
+  }));
+  $("#main").innerHTML = `
+    <div class="crumb"><a href="#/">Accueil</a> &nbsp;›&nbsp; Ma progression</div>
+    <h1>📊 Ma progression</h1>
+    <p class="sub">Coche <b>✓</b> quand tu fais un cours et <b>QCM</b> quand tu fais ses QCM (colonne QCM du <a href="#/programme">programme</a>). Les fichiers cochés ✓ dans l'explorateur sont comptés aussi. Tout est enregistré sur cet appareil, hors ligne.</p>
+    <div class="cards">
+      <div class="card stat"><div class="cnum">${pct}%</div><div class="cname">du programme fait</div><div class="cmeta">${st.done} / ${st.total} sujets</div></div>
+      <div class="card stat"><div class="cnum">${qpct}%</div><div class="cname">QCM faits</div><div class="cmeta">${st.qcm} / ${st.total}</div></div>
+      <div class="card stat"><div class="cnum">${st.files}</div><div class="cname">fichiers cochés ✓</div><div class="cmeta">dans l'explorateur de dossiers</div></div>
+    </div>
+    ${mods.map(m=>{ const p = m.total?Math.round(100*m.d/m.total):0; return `<div class="modbar"><div class="modname">${esc(m.mod)} — ${m.d}/${m.total} faits (${p}%) · QCM ${m.q}/${m.total}</div><div class="pbar"><div class="pfill" style="width:${p}%"></div></div></div>`; }).join("")}
+    <div class="filter-bar">
+      <button class="btn small${progFilter==="all"?" active":""}" data-pf="all">Tous (${st.total})</button>
+      <button class="btn small${progFilter==="todo"?" active":""}" data-pf="todo">À faire (${st.total-st.done})</button>
+      <button class="btn small${progFilter==="done"?" active":""}" data-pf="done">Faits (${st.done})</button>
+      <button class="btn small" id="progReset">🗑 Réinitialiser</button>
+    </div>
+    <div class="plist">${items.join("") || '<div class="empty">Rien ici.</div>'}</div>
+    <footer>Progression enregistrée localement sur cet appareil (localStorage).</footer>`;
+  bindPreview();
+  document.querySelectorAll("[data-pf]").forEach(b=>b.addEventListener("click",()=>{ progFilter=b.dataset.pf; renderProgression(); }));
+  const rst = $("#progReset");
+  if(rst) rst.addEventListener("click",()=>{ if(confirm("Effacer toute la progression ?")){ PROG={rows:{},files:{}}; saveProg(); renderProgression(); } });
+}
+
 /* ---------- Routeur ---------- */
 function route(){
   const h = location.hash || "#/";
   searchMode = false;
   $("#search").value = "";
   if(h === "#/programme"){ renderProgramme(); }
+  else if(h === "#/progression"){ renderProgression(); }
   else if(h.startsWith("#/f/")){ renderFolder(h.slice(4)); }
   else { renderHome(); }
   renderTree();
-  document.querySelectorAll("[data-nav]").forEach(a=>a.classList.toggle("active", (a.dataset.nav==="programme") === (h==="#/programme")));
+  document.querySelectorAll("[data-nav]").forEach(a=>{
+    const target = a.dataset.nav==="home" ? "#/" : "#/"+a.dataset.nav;
+    a.classList.toggle("active", h===target);
+  });
   $("#main").scrollTop = 0; window.scrollTo(0,0);
   $("#sidebar").classList.remove("open");
 }
@@ -462,6 +553,34 @@ $("#themeBtn").addEventListener("click", ()=>{
   const t = localStorage.getItem("rc-theme");
   if(t){ document.documentElement.dataset.theme = t; $("#themeBtn").textContent = t==="dark"?"☀️":"🌙"; }
 })();
+function bindGlobal(){
+  document.addEventListener("click", e=>{
+    const b = e.target.closest("[data-done]");
+    if(b){
+      const id = b.getAttribute("data-done");
+      if(PROG.files[id]) delete PROG.files[id]; else PROG.files[id] = 1;
+      saveProg();
+      b.textContent = PROG.files[id] ? "✓" : "○";
+      b.classList.toggle("on", !!PROG.files[id]);
+    }
+  });
+  document.addEventListener("change", e=>{
+    const c = e.target.closest("[data-row]");
+    if(c){
+      const id = c.getAttribute("data-row"), k = c.getAttribute("data-kind");
+      PROG.rows[id] = PROG.rows[id] || {};
+      PROG.rows[id][k] = c.checked ? 1 : 0;
+      if(!PROG.rows[id].done && !PROG.rows[id].qcm) delete PROG.rows[id];
+      saveProg();
+      const tr = c.closest("tr");
+      if(tr && k==="done") tr.classList.toggle("done", c.checked);
+      if(currentRoute==="progression") renderProgression();
+      else if(currentRoute==="home") renderHome();
+    }
+  });
+}
+loadProg();
+bindGlobal();
 route();
 </script>
 </body>

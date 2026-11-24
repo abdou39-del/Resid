@@ -28,6 +28,10 @@ les liens ouvrent Google Drive (le Drive doit rester public).
   « ⭐ conseils » par spécialité, fichiers récents.
 - Navigation par URL (`#/f/<id-dossier>`), thème clair/sombre, responsive
   (menu latéral coulissant sur mobile).
+- **Suivi de progression** (`#/progression`) : coche « ✓ cours fait » et
+  « QCM » sur chaque sujet du programme, coche ✓ sur chaque fichier dans
+  l'explorateur ; barres de progression globales et par module, filtres
+  Tous / À faire / Faits. Enregistré en localStorage (hors ligne, par appareil).
 
 ## Fichiers
 
